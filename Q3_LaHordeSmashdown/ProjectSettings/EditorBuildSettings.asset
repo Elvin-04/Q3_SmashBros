@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Multiplayer.unity
+  - enabled: 0
+    path: Assets/Scenes/Multiplayer + Attack.unity
     guid: 410f360ea4d48da45950116620957299
+  - enabled: 1
+    path: Assets/Scenes/Camera.unity
+    guid: 556e1d1b0b99b2648aa51156d15ecba4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7ff5804e66035f0498d98f86975ab6f0, type: 2}
   m_UseUCBPForAssetBundles: 0
