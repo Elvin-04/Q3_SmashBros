@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     public float speed;
     public GameObject _rightArm;
     public GameObject _leftArm;
+    public GameObject _rightWallDetection;
+    public GameObject _leftWallDetection;
     public float _pourcent;
     public float _inputDeadZone = 0.3f;
     public int _lifeMax = 5;
@@ -36,6 +38,9 @@ public class PlayerAttack : MonoBehaviour
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), _leftArm.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), _leftArm.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(_rightWallDetection.GetComponent<Collider2D>(), _leftWallDetection.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(_rightWallDetection.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), _leftWallDetection.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), PlayerManager.instance._map.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), PlayerManager.instance._map.GetComponent<Collider2D>());
         _animatorPlayer = GetComponent<Animator>();
@@ -44,9 +49,14 @@ public class PlayerAttack : MonoBehaviour
         foreach (var player in PlayerManager.instance._playerList)
         {
             Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightArm.GetComponent<Collider2D>());
-            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftArm.GetComponent<Collider2D>());
             Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftArm.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftArm.GetComponent<Collider2D>());
             Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightArm.GetComponent<Collider2D>());
+
+            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightWallDetection.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftWallDetection.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftWallDetection.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightWallDetection.GetComponent<Collider2D>());
         }
         PlayerManager.instance._playerList.Add(gameObject);
     }
@@ -65,7 +75,7 @@ public class PlayerAttack : MonoBehaviour
     public void Propulse(float propulsionForce, Vector2 attackDirection)
     {
         GetComponent<PlayerMovements>().canMove = false;
-        StartCoroutine(WaitForSecont(1.0f));
+        StartCoroutine(WaitForSecont(0.5f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
         _rb.AddForce(_force, ForceMode2D.Impulse);
     }
@@ -117,9 +127,11 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         _anim = _animatorPlayer.GetCurrentAnimatorClipInfo(0);
-        if (collision.TryGetComponent(out PlayerAttack _playerTuched) && _attacking && GetComponent<PlayerMovements>().canMove)
+        if ((collision.TryGetComponent(out PlayerAttack _playerTuched) || collision.TryGetComponent(out PlayerMovements _playerMovementTuched)) && _attacking && GetComponent<PlayerMovements>().canMove)
         {
+            Debug.Log("ouvhb");
             _playerTuched.AddPourcent(_pourcentInfliged);
             _playerTuched.Propulse(_propulsionForce, _attackDirection);
         }

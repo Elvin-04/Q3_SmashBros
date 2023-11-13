@@ -783,9 +783,12 @@ MonoBehaviour:
   speed: 10
   _rightArm: {fileID: 4595512241249955586}
   _leftArm: {fileID: 4801007824384223425}
+  _rightWallDetection: {fileID: 2792243090749119138}
+  _leftWallDetection: {fileID: 2384691128108478599}
   _pourcent: 0
   _inputDeadZone: 0.3
   _lifeMax: 5
+  _joystickTuched: 0
   _life: 0
 --- !u!114 &4242532255573462921
 MonoBehaviour:
@@ -807,6 +810,7 @@ MonoBehaviour:
   jumpForce: 14
   maxTimeJump: 0.15
   dodgeTime: 0.25
+  canMove: 1
   reloadDodgeTime: 1.2
   dodgingColor: {r: 1, g: 1, b: 1, a: 0.19607843}
   normaColor: {r: 1, g: 1, b: 1, a: 1}
