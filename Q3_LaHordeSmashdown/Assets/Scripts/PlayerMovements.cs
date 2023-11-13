@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,16 +7,30 @@ public class PlayerMovements : MonoBehaviour
 {
 
     public float speed = 5f;
-    public float jumpForce = 15f;
+    
     public LayerMask groundLayer;
+    public Vector2 gravityWallForce;
 
     Rigidbody2D rb;
     Transform myTransform;
 
     private Vector2 leftJoystickValue;
-    private int jumpCount = 2;
 
-    public Vector2 gravityWallForce;
+    [Header("Jump")]
+    public float jumpForce = 15f;
+    private int jumpCount = 2;
+    private bool isJumping = false;
+    public float maxTimeJump = 0.8f;
+    private float jumpTimer = 0.0f;
+
+    [Header("Dodge")]
+    public float dodgeTime = 0.2f;
+    private bool canDodge = true;
+    private bool canMove = true;
+    public float reloadDodgeTime = 1.2f;
+    public Color dodgingColor;
+    public Color normaColor;
+
 
     private void Awake()
     {
@@ -23,6 +38,7 @@ public class PlayerMovements : MonoBehaviour
         myTransform = GetComponent<Transform>();
 
         jumpCount = 2;
+        canDodge = true;
     }
 
 
@@ -30,19 +46,33 @@ public class PlayerMovements : MonoBehaviour
 
     private void Update()
     {
-        if(leftJoystickValue.x < -0.5f) {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            //myTransform.Translate(new Vector2(-speed * Time.deltaTime, 0));
-        }
-        else if(leftJoystickValue.x > 0.5f) {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-            //myTransform.Translate(new Vector2(speed * Time.deltaTime, 0));
-        }
-        else
+        if (canMove)
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            if(leftJoystickValue.x < -0.5f) {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                //myTransform.Translate(new Vector2(-speed * Time.deltaTime, 0));
+            }
+        else if (leftJoystickValue.x > 0.5f)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+                //myTransform.Translate(new Vector2(speed * Time.deltaTime, 0));
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
         }
         
+        
+    }
+
+    private void FixedUpdate()
+    {
+        if(isJumping && jumpTimer < maxTimeJump)
+        {
+            rb.velocity = Vector2.up * jumpForce + new Vector2(rb.velocity.x, 0);
+            jumpTimer += Time.deltaTime;
+        }
     }
 
     private void Jump()
@@ -50,7 +80,8 @@ public class PlayerMovements : MonoBehaviour
         if(jumpCount > 0)
         {
             rb.velocity = Vector2.zero;
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb.velocity = Vector2.up * jumpForce + new Vector2(rb.velocity.x, 0);
+            isJumping = true;
             jumpCount--;
         }
 
@@ -68,6 +99,39 @@ public class PlayerMovements : MonoBehaviour
         rb.gravityScale = 1;
     }
 
+    private void Dodge()
+    {
+        if(canDodge)
+        {
+            canMove = false;
+            canDodge = false;
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0;
+
+            GetComponent<SpriteRenderer>().color = dodgingColor;
+            GetComponent<Collider2D>().enabled = false;
+
+            StartCoroutine(DodgeTime());
+        }
+        
+    }
+
+    IEnumerator DodgeTime()
+    {
+        yield return new WaitForSeconds(dodgeTime);
+        rb.gravityScale = 1;
+        canMove = true;
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<SpriteRenderer>().color = normaColor;
+        StartCoroutine(DodgeReloadTime());
+    }
+
+    IEnumerator DodgeReloadTime()
+    {
+        yield return new WaitForSeconds(reloadDodgeTime);
+        canDodge = true;
+    }
+
     
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -79,6 +143,20 @@ public class PlayerMovements : MonoBehaviour
         if (context.performed)
         {
             Jump();
+        }
+
+        if(context.canceled)
+        {
+            isJumping = false;
+            jumpTimer = 0.0f;
+        }
+    }
+
+    public void OnDodge(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Dodge();
         }
     }
 
