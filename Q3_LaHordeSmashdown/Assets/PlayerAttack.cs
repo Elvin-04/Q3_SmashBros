@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     public float speed;
     public GameObject _rightArm;
@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float _pourcent;
     public float _inputDeadZone = 0.3f;
     public int _lifeMax = 5;
+    public bool _joystickTuched;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -18,8 +19,6 @@ public class Player : MonoBehaviour
     private AnimatorClipInfo[] _anim;
     private float _pourcentInfliged;
     private Vector2 _force;
-    private bool _cantMoov;
-    private bool _joystickTuched;
     private Vector2 _attackDirection;
     public int _life;
 
@@ -33,7 +32,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _life = _lifeMax;
-        _cantMoov = false;
         _rb = GetComponent<Rigidbody2D>();
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), _leftArm.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
@@ -45,45 +43,12 @@ public class Player : MonoBehaviour
         _attacking = false;
         foreach (var player in PlayerManager.instance._playerList)
         {
-            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<Player>()._rightArm.GetComponent<Collider2D>());
-            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<Player>()._leftArm.GetComponent<Collider2D>());
-            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<Player>()._leftArm.GetComponent<Collider2D>());
-            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<Player>()._rightArm.GetComponent<Collider2D>());
-        }
-        foreach (var mapChild in PlayerManager.instance._mapChilder)
-        {
-            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), mapChild.GetComponent<Collider2D>());
-            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), mapChild.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightArm.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftArm.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._leftArm.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(_leftArm.GetComponent<Collider2D>(), player.GetComponent<PlayerAttack>()._rightArm.GetComponent<Collider2D>());
         }
         PlayerManager.instance._playerList.Add(gameObject);
-    }
-
-    public void Moovement(InputAction.CallbackContext value)
-    {
-        if (value.started)
-        {
-            _joystickTuched = true;
-        }
-
-        if (value.canceled)
-        {
-            _joystickTuched = false;
-        }
-
-        if (!_cantMoov)
-        {
-            Vector2 inputMoovement = value.ReadValue<Vector2>();
-            if (inputMoovement.x > _inputDeadZone)
-            {
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else if (inputMoovement.x < -_inputDeadZone)
-            {
-                gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-
-            _rb.velocity = inputMoovement.normalized * speed;
-        }
     }
 
     public void AddPourcent(float pourcent)
@@ -99,7 +64,7 @@ public class Player : MonoBehaviour
 
     public void Propulse(float propulsionForce, Vector2 attackDirection)
     {
-        _cantMoov = true;
+        GetComponent<PlayerMovements>().canMove = false;
         StartCoroutine(WaitForSecont(1.0f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
         _rb.AddForce(_force, ForceMode2D.Impulse);
@@ -147,13 +112,13 @@ public class Player : MonoBehaviour
     private IEnumerator WaitForSecont(float secondToWait)
     {
         yield return new WaitForSeconds(secondToWait);
-        _cantMoov = false;
+        GetComponent<PlayerMovements>().canMove = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _anim = _animatorPlayer.GetCurrentAnimatorClipInfo(0);
-        if (collision.TryGetComponent(out Player _playerTuched) && _attacking && !_cantMoov)
+        if (collision.TryGetComponent(out PlayerAttack _playerTuched) && _attacking && GetComponent<PlayerMovements>().canMove)
         {
             _playerTuched.AddPourcent(_pourcentInfliged);
             _playerTuched.Propulse(_propulsionForce, _attackDirection);

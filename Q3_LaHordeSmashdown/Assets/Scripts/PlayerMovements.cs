@@ -26,7 +26,7 @@ public class PlayerMovements : MonoBehaviour
     [Header("Dodge")]
     public float dodgeTime = 0.2f;
     private bool canDodge = true;
-    private bool canMove = true;
+    public bool canMove = true;
     public float reloadDodgeTime = 1.2f;
     public Color dodgingColor;
     public Color normaColor;
@@ -42,30 +42,6 @@ public class PlayerMovements : MonoBehaviour
     }
 
 
-
-
-    private void Update()
-    {
-        if (canMove)
-        {
-            if(leftJoystickValue.x < -0.5f) {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
-                //myTransform.Translate(new Vector2(-speed * Time.deltaTime, 0));
-            }
-        else if (leftJoystickValue.x > 0.5f)
-            {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
-                //myTransform.Translate(new Vector2(speed * Time.deltaTime, 0));
-            }
-            else
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
-        }
-        
-        
-    }
-
     private void FixedUpdate()
     {
         if(isJumping && jumpTimer < maxTimeJump)
@@ -79,7 +55,7 @@ public class PlayerMovements : MonoBehaviour
     {
         if(jumpCount > 0)
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero + new Vector2(rb.velocity.x, 0);
             rb.velocity = Vector2.up * jumpForce + new Vector2(rb.velocity.x, 0);
             isJumping = true;
             jumpCount--;
@@ -135,7 +111,36 @@ public class PlayerMovements : MonoBehaviour
     
     public void OnMove(InputAction.CallbackContext context)
     {
+        Debug.Log("test");
         leftJoystickValue = context.ReadValue<Vector2>();
+
+        if (context.started)
+        {
+            GetComponent<PlayerAttack>()._joystickTuched = true;
+        }
+
+        if (context.canceled)
+        {
+            GetComponent<PlayerAttack>()._joystickTuched = false;
+        }
+
+        if (canMove)
+        {
+            if (leftJoystickValue.x < -0.5f)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                transform.rotation = Quaternion.Euler(new(0, 180, 0));
+            }
+            else if (leftJoystickValue.x > 0.5f)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+                transform.rotation = Quaternion.Euler(new(0, 0, 0));
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
