@@ -439,6 +439,7 @@ MonoBehaviour:
   _rightArm: {fileID: 4595512241249955586}
   _leftArm: {fileID: 4801007824384223425}
   _pourcent: 0
+  _inputDeadZone: 0.3
 --- !u!114 &5718373101307673031
 MonoBehaviour:
   m_ObjectHideFlags: 0

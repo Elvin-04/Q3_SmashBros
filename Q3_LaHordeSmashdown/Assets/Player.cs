@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public GameObject _rightArm;
     public GameObject _leftArm;
     public float _pourcent;
+    public float _inputDeadZone = 0.3f;
+    public int _lifeMax = 5;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     private bool _cantMoov;
     private bool _joystickTuched;
     private Vector2 _attackDirection;
+    public int _life;
 
     //public enum Attack
     //{
@@ -29,6 +32,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        _life = _lifeMax;
         _cantMoov = false;
         _rb = GetComponent<Rigidbody2D>();
         Physics2D.IgnoreCollision(_rightArm.GetComponent<Collider2D>(), _leftArm.GetComponent<Collider2D>());
@@ -69,11 +73,11 @@ public class Player : MonoBehaviour
         if (!_cantMoov)
         {
             Vector2 inputMoovement = value.ReadValue<Vector2>();
-            if (inputMoovement.x > 0.3)
+            if (inputMoovement.x > _inputDeadZone)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else if (inputMoovement.x < -0.3)
+            else if (inputMoovement.x < -_inputDeadZone)
             {
                 gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
@@ -87,9 +91,10 @@ public class Player : MonoBehaviour
         _pourcent += pourcent;
     }
 
-    public void ResetPourcent()
+    public void ResetStat()
     {
         _pourcent = 0;
+        _life = _lifeMax;
     }
 
     public void Propulse(float propulsionForce, Vector2 attackDirection)
@@ -155,5 +160,14 @@ public class Player : MonoBehaviour
         }
 
         _attacking = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "LimitMap")
+        {
+            _life -= 1;
+            transform.position = PlayerManager.instance.transform.position;
+        }
     }
 }

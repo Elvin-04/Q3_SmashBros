@@ -20,4 +20,12 @@ public class PlayerManager : MonoBehaviour
             _mapChilder.Add(_map.transform.GetChild(i).gameObject);
         }
     }
+
+    public void SpawningPlayer()
+    {
+        foreach (var player in _playerList)
+        {
+            player.GetComponent<Player>().ResetStat();
+        }
+    }
 }
