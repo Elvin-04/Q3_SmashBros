@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,7 +17,7 @@ public class PlayerMovements : MonoBehaviour
 
     [Header("Jump")]
     public float jumpForce = 15f;
-    private int jumpCount = 2;
+    public int jumpCount = 2;
     private bool isJumping = false;
     public float maxTimeJump = 0.8f;
     private float jumpTimer = 0.0f;
