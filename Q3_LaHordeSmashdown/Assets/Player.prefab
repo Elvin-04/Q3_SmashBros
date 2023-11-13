@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3013345326414487190}
   - component: {fileID: 7897508954644280707}
   - component: {fileID: 3772488300489072795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 5482396522661833662}
   - component: {fileID: 7289046326234056070}
   - component: {fileID: 7069620956943217065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,10 +781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  _rightArm: {fileID: 4595512241249955586}
-  _leftArm: {fileID: 4801007824384223425}
-  _rightWallDetection: {fileID: 2792243090749119138}
-  _leftWallDetection: {fileID: 2384691128108478599}
   _pourcent: 0
   _inputDeadZone: 0.3
   _lifeMax: 5
