@@ -59,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void BaseAttack()
     {
-        if (!_joystickTuched)
+        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f)
         {
             _animatorPlayer.SetTrigger("BaseAttack");
             _attacking = true;
