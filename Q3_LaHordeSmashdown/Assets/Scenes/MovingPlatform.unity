@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 1995487750}
   m_Layer: 0
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
   - {fileID: 358411140}
   - {fileID: 1867201944}
   - {fileID: 1752154021}
-  speed: 0.5
+  speed: 0.8
 --- !u!251 &1995487751
 PlatformEffector2D:
   m_ObjectHideFlags: 0

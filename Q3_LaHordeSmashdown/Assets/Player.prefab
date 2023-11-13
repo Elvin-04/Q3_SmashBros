@@ -786,6 +786,7 @@ MonoBehaviour:
   _pourcent: 0
   _inputDeadZone: 0.3
   _lifeMax: 5
+  _joystickTuched: 0
   _life: 0
 --- !u!114 &4242532255573462921
 MonoBehaviour:
@@ -804,9 +805,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   gravityWallForce: {x: 0, y: -18}
+  colliders:
+  - {fileID: 6296177008558822085}
+  - {fileID: 7069620956943217065}
+  - {fileID: 3772488300489072795}
   jumpForce: 14
   maxTimeJump: 0.15
   dodgeTime: 0.25
+  canMove: 1
   reloadDodgeTime: 1.2
   dodgingColor: {r: 1, g: 1, b: 1, a: 0.19607843}
   normaColor: {r: 1, g: 1, b: 1, a: 1}
