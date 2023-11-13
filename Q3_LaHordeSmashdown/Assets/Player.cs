@@ -167,6 +167,7 @@ public class Player : MonoBehaviour
         if (collision.transform.tag == "LimitMap")
         {
             _life -= 1;
+            _pourcent = 0;
             transform.position = PlayerManager.instance.transform.position;
         }
     }
