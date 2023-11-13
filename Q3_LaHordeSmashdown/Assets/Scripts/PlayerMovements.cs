@@ -12,7 +12,7 @@ public class PlayerMovements : MonoBehaviour
     public Vector2 gravityWallForce;
 
     Rigidbody2D rb;
-    Transform myTransform;
+    [SerializeField] private Collider2D colliders;
 
     private Vector2 leftJoystickValue;
 
@@ -35,7 +35,6 @@ public class PlayerMovements : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        myTransform = GetComponent<Transform>();
 
         jumpCount = 2;
         canDodge = true;
@@ -172,5 +171,10 @@ public class PlayerMovements : MonoBehaviour
         {
             jumpCount = 2;
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        
     }
 }
