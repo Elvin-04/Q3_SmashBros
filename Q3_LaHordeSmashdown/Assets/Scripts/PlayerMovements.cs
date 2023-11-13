@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,8 @@ public class PlayerMovements : MonoBehaviour
     private Vector2 leftJoystickValue;
     private int jumpCount = 2;
 
+    public Vector2 gravityWallForce;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,12 +30,19 @@ public class PlayerMovements : MonoBehaviour
 
     private void Update()
     {
-        if(leftJoystickValue.x < -0.5f) { 
-            myTransform.Translate(new Vector2(-speed * Time.deltaTime, 0));
+        if(leftJoystickValue.x < -0.5f) {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            //myTransform.Translate(new Vector2(-speed * Time.deltaTime, 0));
         }
         else if(leftJoystickValue.x > 0.5f) {
-            myTransform.Translate(new Vector2(speed * Time.deltaTime, 0));
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            //myTransform.Translate(new Vector2(speed * Time.deltaTime, 0));
         }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+        
     }
 
     private void Jump()
@@ -43,10 +53,22 @@ public class PlayerMovements : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpCount--;
         }
-        
+
     }
 
+    public void GrabWall()
+    {
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(gravityWallForce);
+    }
 
+    public void UnGrabWall()
+    {
+        rb.gravityScale = 1;
+    }
+
+    
     public void OnMove(InputAction.CallbackContext context)
     {
         leftJoystickValue = context.ReadValue<Vector2>();
@@ -54,7 +76,7 @@ public class PlayerMovements : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
         {
             Jump();
         }
@@ -62,7 +84,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == groundLayer)
+        if(collision.transform.tag == "Ground")
         {
             jumpCount = 2;
         }
