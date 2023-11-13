@@ -55,6 +55,7 @@ public class PlayerMovements : MonoBehaviour
     {
         if(jumpCount > 0)
         {
+            rb.gravityScale = 1;
             rb.velocity = Vector2.zero + new Vector2(rb.velocity.x, 0);
             rb.velocity = Vector2.up * jumpForce + new Vector2(rb.velocity.x, 0);
             isJumping = true;
