@@ -1,21 +1,25 @@
 using UnityEngine;
-using UnityEngine.VFX;
+using System.Collections.Generic;
 
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private PlayerManager playerManager;
-    public Transform mapFloor;
+    public Transform levelFocus;
     private Camera cam;
 
     private float posX;
     private float posY;
     private Vector3 pos;
+    public List<Transform> players;
 
     [Header("Cam")]
     public float maxSize = 8;
     public float minSize = 2.5f;
     float actSize = 0.0f;
     bool started = false;
+
+
+    public List<Vector2> twofurther = new List<Vector2>(2) { new Vector2(0, 0), new Vector2(0, 0) };
 
     private void Awake()
     {
@@ -27,35 +31,60 @@ public class CameraMovement : MonoBehaviour
         posX = 0;
         posY = 0;
         SetCameraPosition();
+        players.Add(levelFocus);
     }
 
     private void FixedUpdate()
     {
-        if (playerManager._playerList.Count == 2)
+
+        posX = 0;
+        posY = 0;
+        for (int i = 0; i < players.Count; i++)
         {
-            posX = (playerManager._playerList[0].transform.position.x + playerManager._playerList[1].transform.position.x) / 2;
-            posY = (playerManager._playerList[0].transform.position.y + playerManager._playerList[1].transform.position.y) / 2;
-            SetCameraPosition();
+            posX += players[i].position.x;
+            posY += players[i].position.y;
+        }
+        posX /= players.Count;
+        posY /= players.Count;
+        SetCameraPosition();
 
-            actSize = Vector2.Distance(playerManager._playerList[0].transform.position, playerManager._playerList[1].transform.position) / 2 + 1.5f;
-            
+        twofurther = new List<Vector2>(2) { new Vector2(0,0), new Vector2(0,0) };
+        List<float> values = new List<float>(2) { 0, 0 };
 
-            if(!started)
+        for (int i = 0; i < players.Count; i++)
+        {
+            float newDistance = Vector2.Distance(transform.position, players[i].position);
+            if (values[0] < newDistance)
             {
-                started = true;
-
-                if(actSize < minSize)
-                    actSize = minSize;
-                else if(actSize > maxSize)
-                    actSize = maxSize;
-
-                cam.orthographicSize = actSize;
+                twofurther[1] = twofurther[0];
+                twofurther[0] = players[i].position;
+                values[1] = values[0];
+                values[0] = newDistance;
             }
-
-            if(actSize > minSize && actSize < maxSize)
+            else if (values[1] < newDistance)
             {
-                cam.orthographicSize = actSize;
+                twofurther[1] = players[i].position;
+                values[1] = newDistance;
             }
+        }
+
+        actSize = Vector2.Distance(twofurther[0], twofurther[1]) / 2 + 1.5f;
+
+        if (!started)
+        {
+            started = true;
+
+            if (actSize < minSize)
+                actSize = minSize;
+            else if (actSize > maxSize)
+                actSize = maxSize;
+
+            cam.orthographicSize = actSize;
+        }
+
+        if (actSize > minSize && actSize < maxSize)
+        {
+            cam.orthographicSize = actSize;
         }
 
 

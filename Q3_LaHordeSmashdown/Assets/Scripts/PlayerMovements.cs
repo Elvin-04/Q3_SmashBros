@@ -165,7 +165,7 @@ public class PlayerMovements : MonoBehaviour
 
             if(leftJoystickValue.y < -0.5f)
             {
-                rb.velocity += new Vector2(0, -3);
+                rb.velocity += new Vector2(0, -1.5f);
             }
         }
     }
