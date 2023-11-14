@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private PlayerManager playerManager;
+    public Transform mapFloor;
     private Camera cam;
 
     private float posX;
@@ -35,8 +37,9 @@ public class CameraMovement : MonoBehaviour
             posY = (playerManager._playerList[0].transform.position.y + playerManager._playerList[1].transform.position.y) / 2;
             SetCameraPosition();
 
-
             actSize = Vector2.Distance(playerManager._playerList[0].transform.position, playerManager._playerList[1].transform.position) / 2 + 1.5f;
+            
+
             if(!started)
             {
                 started = true;
