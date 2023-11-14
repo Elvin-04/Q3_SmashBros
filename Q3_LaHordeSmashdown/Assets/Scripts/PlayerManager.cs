@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour
         {
             _gameBegin = true;
         }
-        else
+        else if(_playerList.Count == 1)
         {
             _playerList[0].GetComponent<PlayerAttack>().ResetStat();
         }
