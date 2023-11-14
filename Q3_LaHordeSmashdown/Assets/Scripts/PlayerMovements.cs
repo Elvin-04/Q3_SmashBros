@@ -1,4 +1,7 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +14,8 @@ public class PlayerMovements : MonoBehaviour
     public Vector2 gravityWallForce;
 
     Rigidbody2D rb;
-    Transform myTransform;
+    [SerializeField] private List<Collider2D> colliders;
+    private GameObject currentPlatform;
 
     private Vector2 leftJoystickValue;
 
@@ -34,7 +38,6 @@ public class PlayerMovements : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        myTransform = GetComponent<Transform>();
 
         jumpCount = 2;
         canDodge = true;
@@ -108,6 +111,21 @@ public class PlayerMovements : MonoBehaviour
         canDodge = true;
     }
 
+    IEnumerator DisableCollision()
+    {
+        BoxCollider2D platformCollider = currentPlatform.GetComponent<BoxCollider2D>();
+
+        foreach(Collider2D col in colliders)
+        {
+            Physics2D.IgnoreCollision(col, platformCollider);
+        }
+        yield return new WaitForSeconds(0.25f);
+        foreach (Collider2D col in colliders)
+        {
+            Physics2D.IgnoreCollision(col, platformCollider, false);
+        }
+    }
+
     
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -139,6 +157,16 @@ public class PlayerMovements : MonoBehaviour
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
+
+            if(leftJoystickValue.y < -0.5f && currentPlatform != null)
+            {
+                StartCoroutine(DisableCollision());
+            }
+
+            if(leftJoystickValue.y < -0.5f)
+            {
+                rb.velocity += new Vector2(0, -3);
+            }
         }
     }
 
@@ -169,6 +197,20 @@ public class PlayerMovements : MonoBehaviour
         if(collision.transform.tag == "Ground")
         {
             jumpCount = 2;
+        }
+
+        if(collision.transform.tag == "Platform")
+        {
+            jumpCount = 2;
+            currentPlatform = collision.gameObject;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Platform")
+        {
+            currentPlatform = null;
         }
     }
 }

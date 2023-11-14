@@ -804,6 +804,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   gravityWallForce: {x: 0, y: -18}
+  colliders:
+  - {fileID: 6296177008558822085}
+  - {fileID: 7069620956943217065}
+  - {fileID: 3772488300489072795}
   jumpForce: 14
   jumpCount: 2
   maxTimeJump: 0.15
