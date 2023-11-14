@@ -540,7 +540,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 78ef6dd4e31f52044b2e5af111bc18ea, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -783,8 +783,9 @@ MonoBehaviour:
   speed: 10
   _pourcent: 0
   _inputDeadZone: 0.3
-  _lifeMax: 5
+  _lifeMax: 3
   _joystickTuched: 0
+  _colorPlayer: {r: 0, g: 0, b: 0, a: 0}
   _life: 0
 --- !u!114 &4242532255573462921
 MonoBehaviour:
@@ -804,6 +805,7 @@ MonoBehaviour:
     m_Bits: 64
   gravityWallForce: {x: 0, y: -18}
   jumpForce: 14
+  jumpCount: 2
   maxTimeJump: 0.15
   dodgeTime: 0.25
   canMove: 1

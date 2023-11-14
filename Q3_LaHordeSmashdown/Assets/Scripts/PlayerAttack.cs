@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -9,6 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public float _inputDeadZone = 0.3f;
     public int _lifeMax = 5;
     public bool _joystickTuched;
+    public Color _colorPlayer;
+    public int _life;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -18,7 +19,6 @@ public class PlayerAttack : MonoBehaviour
     private float _pourcentInfliged;
     private Vector2 _force;
     private Vector2 _attackDirection;
-    public int _life;
 
     //public enum Attack
     //{
@@ -34,8 +34,9 @@ public class PlayerAttack : MonoBehaviour
         _animatorPlayer = GetComponent<Animator>();
         _pourcentInfliged = 0;
         _attacking = false;
+        _colorPlayer = GetComponent<SpriteRenderer>().color = Random.ColorHSV();
 
-        PlayerManager.instance._playerList.Add(gameObject);
+        PlayerManager.instance.AddPlayer(gameObject);
     }
 
     public void AddPourcent(float pourcent)
@@ -121,7 +122,14 @@ public class PlayerAttack : MonoBehaviour
             _life -= 1;
             _pourcent = 0;
             _rb.velocity = Vector3.zero;
+            GetComponent<PlayerMovements>().jumpCount = 1;
             transform.position = PlayerManager.instance.transform.position;
+        }
+
+        if (_life == 0)
+        {
+            gameObject.SetActive(false);
+            PlayerManager.instance._playerAlive--;
         }
     }
 }
