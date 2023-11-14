@@ -112,7 +112,6 @@ public class PlayerMovements : MonoBehaviour
     
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("test");
         leftJoystickValue = context.ReadValue<Vector2>();
 
         if (context.started)

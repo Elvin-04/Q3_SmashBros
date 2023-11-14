@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3013345326414487190}
   - component: {fileID: 7897508954644280707}
   - component: {fileID: 3772488300489072795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 5482396522661833662}
   - component: {fileID: 7289046326234056070}
   - component: {fileID: 7069620956943217065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,11 +781,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  _rightArm: {fileID: 4595512241249955586}
-  _leftArm: {fileID: 4801007824384223425}
   _pourcent: 0
   _inputDeadZone: 0.3
   _lifeMax: 5
+  _joystickTuched: 0
   _life: 0
 --- !u!114 &4242532255573462921
 MonoBehaviour:
@@ -807,6 +806,7 @@ MonoBehaviour:
   jumpForce: 14
   maxTimeJump: 0.15
   dodgeTime: 0.25
+  canMove: 1
   reloadDodgeTime: 1.2
   dodgingColor: {r: 1, g: 1, b: 1, a: 0.19607843}
   normaColor: {r: 1, g: 1, b: 1, a: 1}
