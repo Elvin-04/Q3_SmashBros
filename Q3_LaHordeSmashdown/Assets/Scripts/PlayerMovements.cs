@@ -197,12 +197,14 @@ public class PlayerMovements : MonoBehaviour
         if(collision.transform.tag == "Ground")
         {
             jumpCount = 2;
+            rb.velocity = Vector2.zero;
         }
 
         if(collision.transform.tag == "Platform")
         {
             jumpCount = 2;
             currentPlatform = collision.gameObject;
+            rb.velocity = Vector2.zero;
         }
     }
 
