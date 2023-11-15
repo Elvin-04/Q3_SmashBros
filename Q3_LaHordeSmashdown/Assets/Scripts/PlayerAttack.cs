@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public bool _joystickTuched;
     public Color _colorPlayer;
     public int _life;
+    public bool _isPause;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -40,6 +41,7 @@ public class PlayerAttack : MonoBehaviour
         _animatorPlayer = GetComponent<Animator>();
         _pourcentInfliged = 0;
         _attacking = false;
+        _isPause = false;
 
         PlayerManager.instance.AddPlayer(gameObject);
     }
@@ -58,6 +60,7 @@ public class PlayerAttack : MonoBehaviour
     public void Propulse(float propulsionForce, Vector2 attackDirection)
     {
         GetComponent<PlayerMovements>().canMove = false;
+        GetComponent<PlayerMovements>()._ejection = true;
         StartCoroutine(WaitForSecontToMoove(0.5f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
         _rb.AddForce(_force, ForceMode2D.Impulse);
@@ -65,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void BaseAttack()
     {
-        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f)
+        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause)
         {
             _animatorPlayer.Play("BaseAttack");
             _attacking = true;
@@ -77,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void SideAttack()
     {
-        if (_sideAttack)
+        if (_sideAttack && !_isPause)
         {
             _sideAttack = false;
             _animatorPlayer.Play("SideAttack");
@@ -91,7 +94,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void UpAttack()
     {
-        if (_upAttack)
+        if (_upAttack && !_isPause)
         {
             _upAttack = false;
             _animatorPlayer.Play("UpAttack");
@@ -105,7 +108,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void DownAttack()
     {
-        if (_downAttack)
+        if (_downAttack && !_isPause)
         {
             _downAttack = false;
             _animatorPlayer.Play("DownAttack");
