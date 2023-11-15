@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     public Color _colorPlayer;
     public int _life;
     public bool _isPause;
+    public string _name;
+    public bool _dead;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -42,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
         _pourcentInfliged = 0;
         _attacking = false;
         _isPause = false;
+        _dead = false;
 
         PlayerManager.instance.AddPlayer(gameObject);
     }
@@ -178,7 +181,8 @@ public class PlayerAttack : MonoBehaviour
 
         if (_life == 0)
         {
-            gameObject.transform.position = new Vector2(10000f, 0f);
+            gameObject.transform.position = new Vector2(500f, 0f);
+            _dead = true;
             PlayerManager.instance._playerAlive--;
         }
     }
