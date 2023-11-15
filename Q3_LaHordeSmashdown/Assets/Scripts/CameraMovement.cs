@@ -93,7 +93,9 @@ public class CameraMovement : MonoBehaviour
 
         if (actSize > minSize && actSize < maxSize)
         {
-            cam.orthographicSize = actSize;
+            
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, actSize, Time.deltaTime * 5);
+            
         }
 
     }
