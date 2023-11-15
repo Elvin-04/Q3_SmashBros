@@ -177,7 +177,7 @@ public class PlayerMovements : MonoBehaviour
                 StartCoroutine(DisableCollision());
             }
 
-            if(leftJoystickValue.y < -0.5f)
+            if(leftJoystickValue.y < -0.5f && !canDodge)
             {
                 rb.velocity += new Vector2(0, -1.5f);
             }
