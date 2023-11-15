@@ -181,7 +181,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (_life == 0)
         {
-            gameObject.transform.position = new Vector2(500f, 0f);
+            gameObject.transform.position = new Vector2(100000f, 0f);
             _dead = true;
             PlayerManager.instance._playerAlive--;
         }
