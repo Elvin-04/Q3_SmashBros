@@ -21,8 +21,6 @@ public class CameraMovement : MonoBehaviour
     bool started = false;
 
     public float smoothTime = 0.5f;
-    float actSize = 0.0f;
-    bool started = false;
 
     private Vector2 velocity = Vector2.zero;
 

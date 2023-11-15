@@ -197,6 +197,56 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &559561390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559561392}
+  - component: {fileID: 559561391}
+  m_Layer: 0
+  m_Name: Levelfocus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559561391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559561390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca1f62ee3228f945a084cf4592fe0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  halfXBounds: 20
+  halfYBounds: 15
+  halfZBounds: 15
+  focusBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!4 &559561392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559561390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &582092239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1778,7 @@ MonoBehaviour:
   _map: {fileID: 1588170318}
   _playerAlive: 0
   _endSceneName: EndMenu
+  camMove: {fileID: 1571564892}
 --- !u!114 &984975273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,8 +2661,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 984975272}
+  levelFocus: {fileID: 559561392}
+  players: []
   maxSize: 8
   minSize: 4
+  smoothTime: 0.5
+  minValues: {x: 0, y: 0, z: 0}
+  maxValues: {x: 0, y: 0, z: 0}
+  twofurther:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
 --- !u!81 &1571564893
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3040,3 +3099,4 @@ SceneRoots:
   - {fileID: 1168736629}
   - {fileID: 1654625234}
   - {fileID: 250397127}
+  - {fileID: 559561392}

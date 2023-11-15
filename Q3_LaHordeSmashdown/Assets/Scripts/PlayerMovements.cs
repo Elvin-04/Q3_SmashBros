@@ -197,6 +197,10 @@ public class PlayerMovements : MonoBehaviour
         if(collision.transform.tag == "Ground")
         {
             jumpCount = 2;
+        }
+
+        if(!canMove)
+        {
             rb.velocity = Vector2.zero;
         }
 
@@ -204,8 +208,9 @@ public class PlayerMovements : MonoBehaviour
         {
             jumpCount = 2;
             currentPlatform = collision.gameObject;
-            rb.velocity = Vector2.zero;
         }
+
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
