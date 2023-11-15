@@ -6,7 +6,6 @@ public class PlayerAttack : MonoBehaviour
 {
     public float speed;
     public float _pourcent;
-    public float _inputDeadZone = 0.3f;
     public int _lifeMax = 5;
     public bool _joystickTuched;
     public Color _colorPlayer;
@@ -41,7 +40,6 @@ public class PlayerAttack : MonoBehaviour
         _animatorPlayer = GetComponent<Animator>();
         _pourcentInfliged = 0;
         _attacking = false;
-        _colorPlayer = GetComponent<SpriteRenderer>().color = Random.ColorHSV();
 
         PlayerManager.instance.AddPlayer(gameObject);
     }
@@ -172,7 +170,6 @@ public class PlayerAttack : MonoBehaviour
             _life -= 1;
             _pourcent = 0;
             _rb.velocity = Vector3.zero;
-            GetComponent<PlayerMovements>().jumpCount = 1;
             transform.position = PlayerManager.instance.transform.position;
         }
 

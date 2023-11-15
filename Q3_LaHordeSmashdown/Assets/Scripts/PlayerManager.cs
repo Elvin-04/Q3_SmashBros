@@ -15,9 +15,7 @@ public class PlayerManager : MonoBehaviour
     private bool _gameBegin;
 
     public CameraMovement camMove;
-
-
-
+    public List<Color> playerColors;
 
     void Start()
     {
@@ -68,6 +66,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AddPlayer(GameObject player)
     {
+        player.GetComponent<PlayerMovements>().normaColor = playerColors[_playerList.Count];
         _playerList.Add(player);
         camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
