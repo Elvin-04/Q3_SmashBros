@@ -13,6 +13,8 @@ public class PlayerMovements : MonoBehaviour
     public LayerMask groundLayer;
     public Vector2 gravityWallForce;
 
+    public bool _ejection;
+
     Rigidbody2D rb;
     [SerializeField] private List<Collider2D> colliders;
     private GameObject currentPlatform;
@@ -50,6 +52,8 @@ public class PlayerMovements : MonoBehaviour
     {
         dodgingColor = normaColor;
         dodgingColor.a = 0.35f;
+
+        _ejection = false;
 
         GetComponent<SpriteRenderer>().color = normaColor;
     }
@@ -154,7 +158,7 @@ public class PlayerMovements : MonoBehaviour
             GetComponent<PlayerAttack>()._joystickTuched = false;
         }
 
-        if (canMove)
+        if (canMove && !GetComponent<PlayerAttack>()._isPause)
         {
             if (leftJoystickValue.x < -0.5f)
             {
@@ -212,9 +216,10 @@ public class PlayerMovements : MonoBehaviour
             jumpCount = 2;
         }
 
-        if(!canMove)
+        if(_ejection)
         {
             rb.velocity = Vector2.zero;
+            _ejection = false;
         }
 
         if(collision.transform.tag == "Platform")

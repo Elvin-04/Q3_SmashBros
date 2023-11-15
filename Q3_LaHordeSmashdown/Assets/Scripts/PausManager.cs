@@ -21,6 +21,12 @@ public class PausManager : MonoBehaviour
     {
         _paused = !_paused;
         _pausCanvas.gameObject.SetActive(_paused);
+
+        foreach (var player in PlayerManager.instance._playerList)
+        {
+            player.GetComponent<PlayerAttack>()._isPause = _paused;
+        }
+
         if (_pausCanvas.gameObject.activeSelf == true)
         {
             Time.timeScale = 0;
