@@ -14,6 +14,11 @@ public class PlayerManager : MonoBehaviour
 
     private bool _gameBegin;
 
+    public CameraMovement camMove;
+
+
+
+
     void Start()
     {
         instance = this;
@@ -64,6 +69,7 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(GameObject player)
     {
         _playerList.Add(player);
+        camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
     }
 }
