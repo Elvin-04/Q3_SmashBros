@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndMenuManager : MonoBehaviour
 {
-    public TextMeshProUGUI _WinnerName;
+    public TextMeshProUGUI _winnerName;
     public string _newGameScene;
     public string _mainMenu;
 
@@ -20,7 +20,8 @@ public class EndMenuManager : MonoBehaviour
         b = PlayerPrefs.GetFloat("WinBlue"); 
         g = PlayerPrefs.GetFloat("WinGreen"); 
 
-        _WinnerName.color = new Color(r, g, b);
+        _winnerName.color = new Color(r, g, b);
+        _winnerName.text = PlayerPrefs.GetString("WinName");
     }
 
     public void PlayAgain()

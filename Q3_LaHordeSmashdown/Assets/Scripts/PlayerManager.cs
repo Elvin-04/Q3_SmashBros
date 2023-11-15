@@ -42,11 +42,12 @@ public class PlayerManager : MonoBehaviour
             {
                 foreach (var player in _playerList)
                 {
-                    if (player.activeSelf == true)
+                    if (player.GetComponent<PlayerAttack>()._dead == false)
                     {
                         PlayerPrefs.SetFloat("WinRed",player.GetComponent<PlayerMovements>().normaColor.r);
                         PlayerPrefs.SetFloat("WinBlue",player.GetComponent<PlayerMovements>().normaColor.b);
                         PlayerPrefs.SetFloat("WinGreen",player.GetComponent<PlayerMovements>().normaColor.g);
+                        PlayerPrefs.SetString("WinName",player.GetComponent<PlayerAttack>()._name);
                         SceneManager.LoadScene(_endSceneName);
                     }
                 }
@@ -67,6 +68,7 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(GameObject player)
     {
         player.GetComponent<PlayerMovements>().normaColor = playerColors[_playerList.Count];
+        player.GetComponent<PlayerAttack>()._name = "Player " + (_playerList.Count + 1);
         _playerList.Add(player);
         camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
