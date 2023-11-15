@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     private bool _gameBegin;
 
+    public List<Color> playerColors;
+
     void Start()
     {
         instance = this;
@@ -56,6 +58,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AddPlayer(GameObject player)
     {
+        player.GetComponent<PlayerMovements>().normaColor = playerColors[_playerList.Count];
         _playerList.Add(player);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
     }

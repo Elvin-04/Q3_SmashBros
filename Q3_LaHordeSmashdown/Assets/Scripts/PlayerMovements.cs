@@ -34,6 +34,7 @@ public class PlayerMovements : MonoBehaviour
     public Color dodgingColor;
     public Color normaColor;
 
+    Vector2 savedVelocity;
 
     private void Awake()
     {
@@ -41,6 +42,16 @@ public class PlayerMovements : MonoBehaviour
 
         jumpCount = 2;
         canDodge = true;
+
+        
+    }
+
+    private void Start()
+    {
+        dodgingColor = normaColor;
+        dodgingColor.a = 0.35f;
+
+        GetComponent<SpriteRenderer>().color = normaColor;
     }
 
 
@@ -82,6 +93,7 @@ public class PlayerMovements : MonoBehaviour
     {
         if(canDodge)
         {
+            savedVelocity = rb.velocity;
             canMove = false;
             canDodge = false;
             rb.velocity = Vector2.zero;
@@ -102,6 +114,7 @@ public class PlayerMovements : MonoBehaviour
         canMove = true;
         GetComponent<Collider2D>().enabled = true;
         GetComponent<SpriteRenderer>().color = normaColor;
+        rb.velocity = savedVelocity;
         StartCoroutine(DodgeReloadTime());
     }
 
