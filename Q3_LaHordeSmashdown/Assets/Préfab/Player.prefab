@@ -798,7 +798,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   _pourcent: 0
-  _inputDeadZone: 0.3
   _lifeMax: 3
   _joystickTuched: 0
   _colorPlayer: {r: 0, g: 0, b: 0, a: 0}
@@ -827,7 +826,7 @@ MonoBehaviour:
   jumpForce: 14
   jumpCount: 2
   maxTimeJump: 0.15
-  dodgeTime: 0.25
+  dodgeTime: 0.5
   canMove: 1
   reloadDodgeTime: 1.2
   dodgingColor: {r: 1, g: 1, b: 1, a: 0.19607843}

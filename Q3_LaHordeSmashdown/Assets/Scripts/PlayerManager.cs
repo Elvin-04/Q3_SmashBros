@@ -44,9 +44,9 @@ public class PlayerManager : MonoBehaviour
                 {
                     if (player.activeSelf == true)
                     {
-                        PlayerPrefs.SetFloat("WinRed",player.GetComponent<PlayerAttack>()._colorPlayer.r);
-                        PlayerPrefs.SetFloat("WinBlue",player.GetComponent<PlayerAttack>()._colorPlayer.b);
-                        PlayerPrefs.SetFloat("WinGreen",player.GetComponent<PlayerAttack>()._colorPlayer.g);
+                        PlayerPrefs.SetFloat("WinRed",player.GetComponent<PlayerMovements>().normaColor.r);
+                        PlayerPrefs.SetFloat("WinBlue",player.GetComponent<PlayerMovements>().normaColor.b);
+                        PlayerPrefs.SetFloat("WinGreen",player.GetComponent<PlayerMovements>().normaColor.g);
                         SceneManager.LoadScene(_endSceneName);
                     }
                 }

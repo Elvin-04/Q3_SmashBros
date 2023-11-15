@@ -12,11 +12,12 @@ public class TimerManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     bool timerStarted = false;
+    bool overtime = false;
+    PlayerManager playerManager;
 
-
-    private void Start()
+    private void Awake()
     {
-        StartTimer();
+        playerManager = GetComponent<PlayerManager>();
     }
 
     void StartTimer()
@@ -29,6 +30,12 @@ public class TimerManager : MonoBehaviour
     void StopTimer()
     {
         timerStarted = false;
+        overtime = true;
+        foreach(GameObject player in playerManager._playerList)
+        {
+            player.GetComponent<PlayerAttack>()._life = 1;
+            player.GetComponent<PlayerAttack>()._pourcent = 300;
+        }
     }
 
     void SetText()
@@ -41,6 +48,9 @@ public class TimerManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!timerStarted && playerManager._playerList.Count >= 2 && !overtime)
+            StartTimer();
+
         if(timerStarted)
         {
             actSec -= Time.deltaTime;
