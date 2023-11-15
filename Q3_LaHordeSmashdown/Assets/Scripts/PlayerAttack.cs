@@ -79,8 +79,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if (_sideAttack)
         {
-            GetComponent<PlayerMovements>().canMove = false;
-            _rb.velocity = Vector2.zero;
             _sideAttack = false;
             _animatorPlayer.Play("SideAttack");
             _attacking = true;
@@ -88,22 +86,13 @@ public class PlayerAttack : MonoBehaviour
             _propulsionForce = 1.5f;
             _attackDirection = new Vector2(_rb.transform.forward.z, 1);
             StartCoroutine(WaitForSecontSideAttack(2f));
-            StartCoroutine(ResetTimeAttack());
         }
-    }
-
-    IEnumerator ResetTimeAttack()
-    {
-        yield return new WaitForSeconds(1f);
-        GetComponent<PlayerMovements>().canMove = true;
     }
 
     public void UpAttack()
     {
         if (_upAttack)
         {
-            GetComponent<PlayerMovements>().canMove = false;
-            _rb.velocity = Vector2.zero;
             _upAttack = false;
             _animatorPlayer.Play("UpAttack");
             _attacking = true;
@@ -111,7 +100,6 @@ public class PlayerAttack : MonoBehaviour
             _propulsionForce = 1.0f;
             _attackDirection = new Vector2(Random.Range(-0.5f,0.5f), 2);
             StartCoroutine(WaitForSecontUpAttack(1f));
-            StartCoroutine(ResetTimeAttack());
         }
     }
 
