@@ -198,7 +198,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (_life == 0)
         {
-            gameObject.SetActive(false);
+            gameObject.transform.position = new Vector2(10000f, 0f);
             PlayerManager.instance._playerAlive--;
         }
     }
