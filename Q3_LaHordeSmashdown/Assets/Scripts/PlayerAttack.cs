@@ -120,7 +120,6 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator WaitForSecontToMoove(float secondToWait)
     {
         yield return new WaitForSeconds(secondToWait);
-        GetComponent<PlayerMovements>().canMove = true;
     }
 
     private IEnumerator WaitForSecontSideAttack(float secondToWait)
@@ -133,6 +132,7 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(secondToWait);
         _upAttack = true;
+        GetComponent<PlayerMovements>().canMove = true;
     }
 
     private IEnumerator WaitForSecontDownAttack(float secondToWait)
@@ -156,32 +156,9 @@ public class PlayerAttack : MonoBehaviour
         {
             if ((collision.TryGetComponent(out PlayerAttack _playerTuched) || collision.TryGetComponent(out PlayerMovements _playerMovementTuched)) && _attacking && GetComponent<PlayerMovements>().canMove)
             {
-                if (_playerTuched.gameObject.GetComponent<PlayerMovements>().canMove)
-                {
-                    _playerTuched.AddPourcent(_pourcentInfliged);
-                    _playerTuched.Propulse(_propulsionForce, _attackDirection);
-                    _attacking = false;
-                }
-            }
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (_animatorPlayer.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-        {
-            _attacking = false;
-        }
-        else
-        {
-            if ((collision.TryGetComponent(out PlayerAttack _playerTuched) || collision.TryGetComponent(out PlayerMovements _playerMovementTuched)) && _attacking && GetComponent<PlayerMovements>().canMove)
-            {
-                if (_playerTuched.gameObject.GetComponent<PlayerMovements>().canMove)
-                {
-                    _playerTuched.AddPourcent(_pourcentInfliged);
-                    _playerTuched.Propulse(_propulsionForce, _attackDirection);
-                    _attacking = false;
-                }
+                _playerTuched.AddPourcent(_pourcentInfliged);
+                _playerTuched.Propulse(_propulsionForce, _attackDirection);
+                _attacking = false;
             }
         }
     }
