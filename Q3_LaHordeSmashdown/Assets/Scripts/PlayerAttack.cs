@@ -143,6 +143,10 @@ public class PlayerAttack : MonoBehaviour
         _downAttack = true;
     }
 
+    public void Pause()
+    {
+        PausManager.instance.PausResumaGame();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

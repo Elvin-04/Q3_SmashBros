@@ -1,0 +1,4040 @@
+fileFormatVersion: 2
+guid: 6c27b35aabd3f0a4192ebe2a37f64440
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -121550713077426955
+    second: Quit_0
+  - first:
+      213: 223920669891790421
+    second: Quit_1
+  - first:
+      213: 8043252216654102714
+    second: Quit_2
+  - first:
+      213: -6785389222039301044
+    second: Quit_3
+  - first:
+      213: 1526085760574542656
+    second: Quit_4
+  - first:
+      213: -5875845347016656407
+    second: Quit_5
+  - first:
+      213: 5076748471295259437
+    second: Quit_6
+  - first:
+      213: -9099961264558706417
+    second: Quit_7
+  - first:
+      213: -6233667942767121944
+    second: Quit_8
+  - first:
+      213: 8988194820223025256
+    second: Quit_9
+  - first:
+      213: -4692791114217423672
+    second: Quit_10
+  - first:
+      213: -2608717477129626800
+    second: Quit_11
+  - first:
+      213: -7520453401562878767
+    second: Quit_12
+  - first:
+      213: -9147443635982722403
+    second: Quit_13
+  - first:
+      213: -1763543109159704932
+    second: Quit_14
+  - first:
+      213: -4392709716312484314
+    second: Quit_15
+  - first:
+      213: 880441593764964508
+    second: Quit_16
+  - first:
+      213: -2686111639864631569
+    second: Quit_17
+  - first:
+      213: -6441165517735356258
+    second: Quit_18
+  - first:
+      213: 1529230058538720808
+    second: Quit_19
+  - first:
+      213: -7574823624729311941
+    second: Quit_20
+  - first:
+      213: -8276472143311738200
+    second: Quit_21
+  - first:
+      213: 8126762846960752742
+    second: Quit_22
+  - first:
+      213: -2089618426853017317
+    second: Quit_23
+  - first:
+      213: -2903380787731625152
+    second: Quit_24
+  - first:
+      213: -2405389474882579928
+    second: Quit_25
+  - first:
+      213: 6011217264884598275
+    second: Quit_26
+  - first:
+      213: 7303044480457604546
+    second: Quit_27
+  - first:
+      213: -7022599895401927403
+    second: Quit_28
+  - first:
+      213: 7074665200850889051
+    second: Quit_29
+  - first:
+      213: -2658679333614161842
+    second: Quit_30
+  - first:
+      213: 666448945270236164
+    second: Quit_31
+  - first:
+      213: 5609199079118507492
+    second: Quit_32
+  - first:
+      213: -9157057936332264906
+    second: Quit_33
+  - first:
+      213: -8797405171296454543
+    second: Quit_34
+  - first:
+      213: 2466413507192237246
+    second: Quit_35
+  - first:
+      213: 8611587386693331958
+    second: Quit_36
+  - first:
+      213: 290709903968686631
+    second: Quit_37
+  - first:
+      213: 5115013328168263949
+    second: Quit_38
+  - first:
+      213: -6257991795824157813
+    second: Quit_39
+  - first:
+      213: -849510311205918328
+    second: Quit_40
+  - first:
+      213: -3522452276942475017
+    second: Quit_41
+  - first:
+      213: -8615803842408948401
+    second: Quit_42
+  - first:
+      213: 6090996613721361760
+    second: Quit_43
+  - first:
+      213: -8173552159454855575
+    second: Quit_44
+  - first:
+      213: -7056535304484947856
+    second: Quit_45
+  - first:
+      213: 6887871928765173925
+    second: Quit_46
+  - first:
+      213: 1941948895422140170
+    second: Quit_47
+  - first:
+      213: -1672881526375526919
+    second: Quit_48
+  - first:
+      213: 2663810013959753414
+    second: Quit_49
+  - first:
+      213: 4886064740056893391
+    second: Quit_50
+  - first:
+      213: 1526760463543180695
+    second: Quit_51
+  - first:
+      213: -6569110462916830045
+    second: Quit_52
+  - first:
+      213: 6742074182652473989
+    second: Quit_53
+  - first:
+      213: 4416662117976330922
+    second: Quit_54
+  - first:
+      213: -7532258326216493049
+    second: Quit_55
+  - first:
+      213: 8450796332133382348
+    second: Quit_56
+  - first:
+      213: -8451554683393189388
+    second: Quit_57
+  - first:
+      213: -6759830832982123872
+    second: Quit_58
+  - first:
+      213: 4390826760389530787
+    second: Quit_59
+  - first:
+      213: -181951856053073420
+    second: Quit_60
+  - first:
+      213: 6096539980102999558
+    second: Quit_61
+  - first:
+      213: -3370938498246517120
+    second: Quit_62
+  - first:
+      213: -2722163150761616883
+    second: Quit_63
+  - first:
+      213: 7848270004784124433
+    second: Quit_64
+  - first:
+      213: -757002181344179258
+    second: Quit_65
+  - first:
+      213: -694485698100343300
+    second: Quit_66
+  - first:
+      213: 2622762032343727660
+    second: Quit_67
+  - first:
+      213: 4297988778193754481
+    second: Quit_68
+  - first:
+      213: 5843267844933904620
+    second: Quit_69
+  - first:
+      213: 273533111962048277
+    second: Quit_70
+  - first:
+      213: -3889799427629591513
+    second: Quit_71
+  - first:
+      213: 394290297417374621
+    second: Quit_72
+  - first:
+      213: -8228410864117201583
+    second: Quit_73
+  - first:
+      213: -165113954025259753
+    second: Quit_74
+  - first:
+      213: -7726778079823114387
+    second: Quit_75
+  - first:
+      213: 903132919446251057
+    second: Quit_76
+  - first:
+      213: -566202860838076682
+    second: Quit_77
+  - first:
+      213: -1092030207030841480
+    second: Quit_78
+  - first:
+      213: 236595281985106689
+    second: Quit_79
+  - first:
+      213: -38694576761180482
+    second: Quit_80
+  - first:
+      213: -7022771081102035240
+    second: Quit_81
+  - first:
+      213: 6620472237324846965
+    second: Quit_82
+  - first:
+      213: -4725079503777002738
+    second: Quit_83
+  - first:
+      213: 1559353411284234587
+    second: Quit_84
+  - first:
+      213: 1823797638941136711
+    second: Quit_85
+  - first:
+      213: -283011423782068078
+    second: Quit_86
+  - first:
+      213: 3043991546040136661
+    second: Quit_87
+  - first:
+      213: -1657837188007677045
+    second: Quit_88
+  - first:
+      213: 6418077196405216954
+    second: Quit_89
+  - first:
+      213: -133548867334684366
+    second: Quit_90
+  - first:
+      213: 9131445776481441782
+    second: Quit_91
+  - first:
+      213: 6456472378693667621
+    second: Quit_92
+  - first:
+      213: 1478373788473337581
+    second: Quit_93
+  - first:
+      213: -1222043072483017101
+    second: Quit_94
+  - first:
+      213: -5704227533435416689
+    second: Quit_95
+  - first:
+      213: 3284958862827363413
+    second: Quit_96
+  - first:
+      213: 9066523355037997559
+    second: Quit_97
+  - first:
+      213: 4798224466707666702
+    second: Quit_98
+  - first:
+      213: 3111869173408109290
+    second: Quit_99
+  - first:
+      213: -6739972315152332149
+    second: Quit_100
+  - first:
+      213: 4683121075807313476
+    second: Quit_101
+  - first:
+      213: -4055802367177600911
+    second: Quit_102
+  - first:
+      213: -1193104803588590621
+    second: Quit_103
+  - first:
+      213: 8971138971899421768
+    second: Quit_104
+  - first:
+      213: -7266954395173764923
+    second: Quit_105
+  - first:
+      213: 4579303563037415305
+    second: Quit_106
+  - first:
+      213: -489767702409569742
+    second: Quit_107
+  - first:
+      213: 1015053572411999411
+    second: Quit_108
+  - first:
+      213: -6042520859170566434
+    second: Quit_109
+  - first:
+      213: -4931576289247967035
+    second: Quit_110
+  - first:
+      213: -3442865560823799502
+    second: Quit_111
+  - first:
+      213: 6400630902126339821
+    second: Quit_112
+  - first:
+      213: -7026876777708730096
+    second: Quit_113
+  - first:
+      213: 1449497430397885347
+    second: Quit_114
+  - first:
+      213: 6183871308671177231
+    second: Quit_115
+  - first:
+      213: -4531851210169080976
+    second: Quit_116
+  - first:
+      213: 4017902518385396268
+    second: Quit_117
+  - first:
+      213: 671608255400631317
+    second: Quit_118
+  - first:
+      213: -4847162870030420802
+    second: Quit_119
+  - first:
+      213: -481728233172848346
+    second: Quit_120
+  - first:
+      213: -3370389208787574320
+    second: Quit_121
+  - first:
+      213: -5088320573111138349
+    second: Quit_122
+  - first:
+      213: 5501402456223307992
+    second: Quit_123
+  - first:
+      213: -6868475057176530073
+    second: Quit_124
+  - first:
+      213: -904910884359677460
+    second: Quit_125
+  - first:
+      213: -2111663210343620789
+    second: Quit_126
+  - first:
+      213: -122384650039913394
+    second: Quit_127
+  - first:
+      213: -5775598599211855993
+    second: Quit_128
+  - first:
+      213: -6536383484556033632
+    second: Quit_129
+  - first:
+      213: 3626789379343050402
+    second: Quit_130
+  - first:
+      213: 7359378802565464315
+    second: Quit_131
+  - first:
+      213: -4007745534257884237
+    second: Quit_132
+  - first:
+      213: -4400122847316240054
+    second: Quit_133
+  - first:
+      213: -3163623067497066489
+    second: Quit_134
+  - first:
+      213: 7720294889411772890
+    second: Quit_135
+  - first:
+      213: 4316817296628475808
+    second: Quit_136
+  - first:
+      213: 1072932073207640483
+    second: Quit_137
+  - first:
+      213: 4344955131677529212
+    second: Quit_138
+  - first:
+      213: 526888976435363592
+    second: Quit_139
+  - first:
+      213: -5784397083652910666
+    second: Quit_140
+  - first:
+      213: -4296757605945864386
+    second: Quit_141
+  - first:
+      213: -2760334117605878037
+    second: Quit_142
+  - first:
+      213: 5480374649457594058
+    second: Quit_143
+  - first:
+      213: 1184672517941384064
+    second: Quit_144
+  - first:
+      213: 8207948182209164313
+    second: Quit_145
+  - first:
+      213: -4256978562778424266
+    second: Quit_146
+  - first:
+      213: -4117683431553935843
+    second: Quit_147
+  - first:
+      213: 1281316472500806564
+    second: Quit_148
+  - first:
+      213: -5015409699463977939
+    second: Quit_149
+  - first:
+      213: -7174508126690989555
+    second: Quit_150
+  - first:
+      213: 7686371118869898294
+    second: Quit_151
+  - first:
+      213: -1506185970947827656
+    second: Quit_152
+  - first:
+      213: 5491998560288594814
+    second: Quit_153
+  - first:
+      213: -3609536810249675282
+    second: Quit_154
+  - first:
+      213: -1179460949896464294
+    second: Quit_155
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Quit_0
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1725
+        width: 79
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f413dc354a205ef0800000000000000
+      internalID: -121550713077426955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1678
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55684c2b9a68b1300800000000000000
+      internalID: 223920669891790421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_2
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1675
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab08a8ca64f5f9f60800000000000000
+      internalID: 8043252216654102714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1629
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44559df37475d1a0800000000000000
+      internalID: -6785389222039301044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_4
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1624
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043d3d7e9eebd2510800000000000000
+      internalID: 1526085760574542656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_5
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1580
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9b0f7d9cdc47ea0800000000000000
+      internalID: -5875845347016656407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_6
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1574
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23bf8d36db347640800000000000000
+      internalID: 5076748471295259437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_7
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1604
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f01f92c817176b180800000000000000
+      internalID: -9099961264558706417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_8
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 1613
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e920af88009d79a0800000000000000
+      internalID: -6233667942767121944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_9
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 1599
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8604667419b7cbc70800000000000000
+      internalID: 8988194820223025256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_10
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1573
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccf5f7585bdfdeb0800000000000000
+      internalID: -4692791114217423672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_11
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1588
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bd550b649fbcbd0800000000000000
+      internalID: -2608717477129626800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_12
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc67f1f97bf1a790800000000000000
+      internalID: -7520453401562878767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_13
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1530
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a97527a70cd0180800000000000000
+      internalID: -9147443635982722403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_14
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 1558
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96a278c2e2a687e0800000000000000
+      internalID: -1763543109159704932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_15
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1571
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62699cd59c5f903c0800000000000000
+      internalID: -4392709716312484314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_16
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 1557
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98e6d9f6f4f73c00800000000000000
+      internalID: 880441593764964508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_17
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1524
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee93d6f1b309bad0800000000000000
+      internalID: -2686111639864631569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_18
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1543
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9893ef96126c96a0800000000000000
+      internalID: -6441165517735356258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_19
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1542
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82edc03d2aae83510800000000000000
+      internalID: 1529230058538720808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_20
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 1528
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35c5c3eb02d0e690800000000000000
+      internalID: -7574823624729311941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_21
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1528
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaec70bf60142d80800000000000000
+      internalID: -8276472143311738200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_22
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1514
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66810fa70cf08c070800000000000000
+      internalID: 8126762846960752742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_23
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1481
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19b05fac1f2003e0800000000000000
+      internalID: -2089618426853017317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_24
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1474
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b009b6e8e15b7d0800000000000000
+      internalID: -2903380787731625152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_25
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1513
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822192354075e9ed0800000000000000
+      internalID: -2405389474882579928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_26
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 1500
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306442de0422c6350800000000000000
+      internalID: 6011217264884598275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_27
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1505
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd7d840340a95560800000000000000
+      internalID: 7303044480457604546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_28
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1490
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d6fda3a96ba8e90800000000000000
+      internalID: -7022599895401927403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_29
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1476
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59e88954824e2260800000000000000
+      internalID: 7074665200850889051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_30
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 1486
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40714c7b397a1bd0800000000000000
+      internalID: -2658679333614161842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_31
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1472
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40424c3e8c3bf3900800000000000000
+      internalID: 666448945270236164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 1951
+        height: 1271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed8e49f7d0e7dd40800000000000000
+      internalID: 5609199079118507492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_33
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1432
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a6e35b2589be080800000000000000
+      internalID: -9157057936332264906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_34
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 1462
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178b0bb7b9659e580800000000000000
+      internalID: -8797405171296454543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_35
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1458
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc2b6564067a3220800000000000000
+      internalID: 2466413507192237246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_36
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 1288
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb27102a11828770800000000000000
+      internalID: 8611587386693331958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_37
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1274
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722ddbe0e1fc80400800000000000000
+      internalID: 290709903968686631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_38
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1260
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01abde758d2cf640800000000000000
+      internalID: 5115013328168263949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_39
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1246
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b97923e952729a0800000000000000
+      internalID: -6257991795824157813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_40
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 1231
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8892a837fdee534f0800000000000000
+      internalID: -849510311205918328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_41
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1217
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0f39e115cbd1fc0800000000000000
+      internalID: -3522452276942475017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_42
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 1203
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4dd4c6cd048e6880800000000000000
+      internalID: -8615803842408948401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_43
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 1189
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d08f01621978450800000000000000
+      internalID: 6090996613721361760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_44
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1175
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ef096cd95b19e80800000000000000
+      internalID: -8173552159454855575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_45
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 1161
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078fb271786221e90800000000000000
+      internalID: -7056535304484947856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_46
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 1147
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0de649603a69f50800000000000000
+      internalID: 6887871928765173925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_47
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 1132
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f49934b3033fa10800000000000000
+      internalID: 1941948895422140170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_48
+      rect:
+        serializedVersion: 2
+        x: 2113
+        y: 1096
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fdc2157d1bb8c8e0800000000000000
+      internalID: -1672881526375526919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_49
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 1111
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce033f1811c7f420800000000000000
+      internalID: 2663810013959753414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_50
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 1080
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc707ac5ef9cec340800000000000000
+      internalID: 4886064740056893391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_51
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 1066
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d1a9e6d84203510800000000000000
+      internalID: 1526760463543180695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_52
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 1066
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac5a8fa6d4d5d4a0800000000000000
+      internalID: -6569110462916830045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_53
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 1081
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58235528fb8a09d50800000000000000
+      internalID: 6742074182652473989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_54
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 1052
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa257eabbc22b4d30800000000000000
+      internalID: 4416662117976330922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_55
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1038
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708336db5fa087790800000000000000
+      internalID: -7532258326216493049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_56
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1051
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8fbf56d72474570800000000000000
+      internalID: 8450796332133382348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_57
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 1024
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f95f803bcb06ba80800000000000000
+      internalID: -8451554683393189388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_58
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 1036
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa1e5a2ca14032a0800000000000000
+      internalID: -6759830832982123872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_59
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 1010
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a41c4bcca95fec30800000000000000
+      internalID: 4390826760389530787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_60
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 1021
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9cbbd30c3997df0800000000000000
+      internalID: -181951856053073420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_61
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 1007
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e9101afc24b9450800000000000000
+      internalID: 6096539980102999558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_62
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 805
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ed35cbb450831d0800000000000000
+      internalID: -3370938498246517120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_63
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 809
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a123a790fe83ad0800000000000000
+      internalID: -2722163150761616883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_64
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 798
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112d288ccf7aaec60800000000000000
+      internalID: 7848270004784124433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_65
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 785
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbc8ced6869e75f0800000000000000
+      internalID: -757002181344179258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_66
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 795
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdc327efe0bc56f0800000000000000
+      internalID: -694485698100343300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_67
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 786
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2eba342c2ce56420800000000000000
+      internalID: 2622762032343727660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_68
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 775
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1799ad4a50685ab30800000000000000
+      internalID: 4297988778193754481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_69
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 775
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce86fb06525771150800000000000000
+      internalID: 5843267844933904620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_70
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 764
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5171ec48ae8cbc300800000000000000
+      internalID: 273533111962048277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_71
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 753
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724de949708a40ac0800000000000000
+      internalID: -3889799427629591513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_72
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 741
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b12fbbfecc87500800000000000000
+      internalID: 394290297417374621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_73
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 730
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15544524aefcecd80800000000000000
+      internalID: -8228410864117201583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_74
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 719
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d3ddecbb565bdf0800000000000000
+      internalID: -165113954025259753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_75
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 708
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f4edd4648f4c490800000000000000
+      internalID: -7726778079823114387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_76
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 696
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1362e80fa92988c00800000000000000
+      internalID: 903132919446251057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_77
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 685
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6febfe87f717428f0800000000000000
+      internalID: -566202860838076682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_78
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 674
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f2ee1005458d0f0800000000000000
+      internalID: -1092030207030841480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_79
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 663
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103714ac72e884300800000000000000
+      internalID: 236595281985106689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_80
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 651
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe6a69cc77867ff0800000000000000
+      internalID: -38694576761180482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_81
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 640
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6f604f8ea1a8e90800000000000000
+      internalID: -7022771081102035240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_82
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 629
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577451f4c64a0eb50800000000000000
+      internalID: 6620472237324846965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_83
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 618
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b84e1d9352d6eb0800000000000000
+      internalID: -4725079503777002738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_84
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 606
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51f3ee6aafe3a510800000000000000
+      internalID: 1559353411284234587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_85
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 595
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747584b2a4e6f4910800000000000000
+      internalID: 1823797638941136711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_86
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 584
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290a71a0c9a821cf0800000000000000
+      internalID: -283011423782068078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_87
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 573
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3b301fe2e6e3a20800000000000000
+      internalID: 3043991546040136661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_88
+      rect:
+        serializedVersion: 2
+        x: 2211
+        y: 561
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83be517cdd2ef8e0800000000000000
+      internalID: -1657837188007677045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_89
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 550
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab694c8a437911950800000000000000
+      internalID: 6418077196405216954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_90
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 539
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2314c52430a852ef0800000000000000
+      internalID: -133548867334684366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_91
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 527
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7dae0ad8969be70800000000000000
+      internalID: 9131445776481441782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_92
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 506
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b482aab6ff99950800000000000000
+      internalID: 6456472378693667621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_93
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 517
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6a33bb02d348410800000000000000
+      internalID: 1478373788473337581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_94
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 486
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e3c6cdc4e6a0fe0800000000000000
+      internalID: -1222043072483017101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_95
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 496
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f4497d74386d0b0800000000000000
+      internalID: -5704227533435416689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_96
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 465
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c98986ea4869d20800000000000000
+      internalID: 3284958862827363413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_97
+      rect:
+        serializedVersion: 2
+        x: 2179
+        y: 476
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f992d474f2c2dd70800000000000000
+      internalID: 9066523355037997559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_98
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 445
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07d2bafab7b69240800000000000000
+      internalID: 4798224466707666702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_99
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 455
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae29a7c96849f2b20800000000000000
+      internalID: 3111869173408109290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_100
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 424
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ac067a3eec672a0800000000000000
+      internalID: -6739972315152332149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_101
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 435
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ed3a36ec9cdf040800000000000000
+      internalID: 4683121075807313476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_102
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 404
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170d0315c35e6b7c0800000000000000
+      internalID: -4055802367177600911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_103
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 414
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e33a42a08d317fe0800000000000000
+      internalID: -1193104803588590621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_104
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 383
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8446ab22d53ef7c70800000000000000
+      internalID: 8971138971899421768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_105
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 394
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c044b4ca77962b90800000000000000
+      internalID: -7266954395173764923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_106
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 363
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98796811454fc8f30800000000000000
+      internalID: 4579303563037415305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_107
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 373
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a1b6b9edef339f0800000000000000
+      internalID: -489767702409569742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_108
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 342
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4cb9b98d1361e00800000000000000
+      internalID: 1015053572411999411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_109
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 353
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede00411b47a42ca0800000000000000
+      internalID: -6042520859170566434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_110
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 322
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8c2a85e758f8bb0800000000000000
+      internalID: -4931576289247967035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_111
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 332
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231eba5730c7830d0800000000000000
+      internalID: -3442865560823799502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_112
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 301
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6e0abb4eb93d850800000000000000
+      internalID: 6400630902126339821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_113
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 312
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019ca38fcc48b7e90800000000000000
+      internalID: -7026876777708730096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_114
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 281
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab15b1bb36ad1410800000000000000
+      internalID: 1449497430397885347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_115
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 291
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f025312113681d550800000000000000
+      internalID: 6183871308671177231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_116
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 260
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073a2fac551ab11c0800000000000000
+      internalID: -4531851210169080976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_117
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 271
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a428e7d0572c730800000000000000
+      internalID: 4017902518385396268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_118
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 187
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cdf536628025900800000000000000
+      internalID: 671608255400631317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_119
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 178
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4bf531d0b6bbcb0800000000000000
+      internalID: -4847162870030420802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_120
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 189
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621b47769be8059f0800000000000000
+      internalID: -481728233172848346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_121
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 176
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d128672fd8f931d0800000000000000
+      internalID: -3370389208787574320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_122
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 165
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d70668d567a269b0800000000000000
+      internalID: -5088320573111138349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_123
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 168
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8d6a1e268e85c40800000000000000
+      internalID: 5501402456223307992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_124
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 154
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763bc5483564ea0a0800000000000000
+      internalID: -6868475057176530073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_125
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 148
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce95b58585c1173f0800000000000000
+      internalID: -904910884359677460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_126
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 158
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f153e8f7dd1b2e0800000000000000
+      internalID: -2111663210343620789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_127
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 142
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4419682fc33d4ef0800000000000000
+      internalID: -122384650039913394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_128
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 131
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fcbb8aca3f8dfa0800000000000000
+      internalID: -5775598599211855993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_129
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 137
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a1ce4f1ad91a45a0800000000000000
+      internalID: -6536383484556033632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_130
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 120
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6e6e699b1f45230800000000000000
+      internalID: 3626789379343050402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_131
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 117
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0447e7704c12660800000000000000
+      internalID: 7359378802565464315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_132
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 127
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b39668aba0a168c0800000000000000
+      internalID: -4007745534257884237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_133
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 109
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4992ad459f9fe2c0800000000000000
+      internalID: -4400122847316240054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_134
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 107
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7001b9ae49d8814d0800000000000000
+      internalID: -3163623067497066489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_135
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 97
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad107ac4c4ff32b60800000000000000
+      internalID: 7720294889411772890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_136
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 86
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a76dc5b57a68eb30800000000000000
+      internalID: 4316817296628475808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_137
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 86
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a13aa33902d3ee00800000000000000
+      internalID: 1072932073207640483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_138
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 96
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7456a4fba16c4c30800000000000000
+      internalID: 4344955131677529212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_139
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 75
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fbf748bb2ef4700800000000000000
+      internalID: 526888976435363592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_140
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 66
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1101ddf71b9bfa0800000000000000
+      internalID: -5784397083652910666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_141
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 76
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f83abf8b9de54c0800000000000000
+      internalID: -4296757605945864386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_142
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 64
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6d5b2beb251b9d0800000000000000
+      internalID: -2760334117605878037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_143
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 55
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acec9f815b33e0c40800000000000000
+      internalID: 5480374649457594058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_144
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 52
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083501fd06dc07010800000000000000
+      internalID: 1184672517941384064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_145
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 41
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914f367526d78e170800000000000000
+      internalID: 8207948182209164313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_146
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 45
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c93253d8c2ce4c0800000000000000
+      internalID: -4256978562778424266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_147
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 30
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1657b44cbc0bd6c0800000000000000
+      internalID: -4117683431553935843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_148
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 25
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a364440b8628c110800000000000000
+      internalID: 1281316472500806564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_149
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 35
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24a66c737fa56ab0800000000000000
+      internalID: -5015409699463977939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_150
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 19
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a2e66fed60f6c90800000000000000
+      internalID: -7174508126690989555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_151
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 14
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634ef08fec97baa60800000000000000
+      internalID: 7686371118869898294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_152
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 7
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8385afbe6d3f81be0800000000000000
+      internalID: -1506185970947827656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_153
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b55fcb79f773c40800000000000000
+      internalID: 5491998560288594814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_154
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 4
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed1f5d256958edc0800000000000000
+      internalID: -3609536810249675282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_155
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58f9fed386b1afe0800000000000000
+      internalID: -1179460949896464294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Quit_0: -121550713077426955
+      Quit_1: 223920669891790421
+      Quit_10: -4692791114217423672
+      Quit_100: -6739972315152332149
+      Quit_101: 4683121075807313476
+      Quit_102: -4055802367177600911
+      Quit_103: -1193104803588590621
+      Quit_104: 8971138971899421768
+      Quit_105: -7266954395173764923
+      Quit_106: 4579303563037415305
+      Quit_107: -489767702409569742
+      Quit_108: 1015053572411999411
+      Quit_109: -6042520859170566434
+      Quit_11: -2608717477129626800
+      Quit_110: -4931576289247967035
+      Quit_111: -3442865560823799502
+      Quit_112: 6400630902126339821
+      Quit_113: -7026876777708730096
+      Quit_114: 1449497430397885347
+      Quit_115: 6183871308671177231
+      Quit_116: -4531851210169080976
+      Quit_117: 4017902518385396268
+      Quit_118: 671608255400631317
+      Quit_119: -4847162870030420802
+      Quit_12: -7520453401562878767
+      Quit_120: -481728233172848346
+      Quit_121: -3370389208787574320
+      Quit_122: -5088320573111138349
+      Quit_123: 5501402456223307992
+      Quit_124: -6868475057176530073
+      Quit_125: -904910884359677460
+      Quit_126: -2111663210343620789
+      Quit_127: -122384650039913394
+      Quit_128: -5775598599211855993
+      Quit_129: -6536383484556033632
+      Quit_13: -9147443635982722403
+      Quit_130: 3626789379343050402
+      Quit_131: 7359378802565464315
+      Quit_132: -4007745534257884237
+      Quit_133: -4400122847316240054
+      Quit_134: -3163623067497066489
+      Quit_135: 7720294889411772890
+      Quit_136: 4316817296628475808
+      Quit_137: 1072932073207640483
+      Quit_138: 4344955131677529212
+      Quit_139: 526888976435363592
+      Quit_14: -1763543109159704932
+      Quit_140: -5784397083652910666
+      Quit_141: -4296757605945864386
+      Quit_142: -2760334117605878037
+      Quit_143: 5480374649457594058
+      Quit_144: 1184672517941384064
+      Quit_145: 8207948182209164313
+      Quit_146: -4256978562778424266
+      Quit_147: -4117683431553935843
+      Quit_148: 1281316472500806564
+      Quit_149: -5015409699463977939
+      Quit_15: -4392709716312484314
+      Quit_150: -7174508126690989555
+      Quit_151: 7686371118869898294
+      Quit_152: -1506185970947827656
+      Quit_153: 5491998560288594814
+      Quit_154: -3609536810249675282
+      Quit_155: -1179460949896464294
+      Quit_16: 880441593764964508
+      Quit_17: -2686111639864631569
+      Quit_18: -6441165517735356258
+      Quit_19: 1529230058538720808
+      Quit_2: 8043252216654102714
+      Quit_20: -7574823624729311941
+      Quit_21: -8276472143311738200
+      Quit_22: 8126762846960752742
+      Quit_23: -2089618426853017317
+      Quit_24: -2903380787731625152
+      Quit_25: -2405389474882579928
+      Quit_26: 6011217264884598275
+      Quit_27: 7303044480457604546
+      Quit_28: -7022599895401927403
+      Quit_29: 7074665200850889051
+      Quit_3: -6785389222039301044
+      Quit_30: -2658679333614161842
+      Quit_31: 666448945270236164
+      Quit_32: 5609199079118507492
+      Quit_33: -9157057936332264906
+      Quit_34: -8797405171296454543
+      Quit_35: 2466413507192237246
+      Quit_36: 8611587386693331958
+      Quit_37: 290709903968686631
+      Quit_38: 5115013328168263949
+      Quit_39: -6257991795824157813
+      Quit_4: 1526085760574542656
+      Quit_40: -849510311205918328
+      Quit_41: -3522452276942475017
+      Quit_42: -8615803842408948401
+      Quit_43: 6090996613721361760
+      Quit_44: -8173552159454855575
+      Quit_45: -7056535304484947856
+      Quit_46: 6887871928765173925
+      Quit_47: 1941948895422140170
+      Quit_48: -1672881526375526919
+      Quit_49: 2663810013959753414
+      Quit_5: -5875845347016656407
+      Quit_50: 4886064740056893391
+      Quit_51: 1526760463543180695
+      Quit_52: -6569110462916830045
+      Quit_53: 6742074182652473989
+      Quit_54: 4416662117976330922
+      Quit_55: -7532258326216493049
+      Quit_56: 8450796332133382348
+      Quit_57: -8451554683393189388
+      Quit_58: -6759830832982123872
+      Quit_59: 4390826760389530787
+      Quit_6: 5076748471295259437
+      Quit_60: -181951856053073420
+      Quit_61: 6096539980102999558
+      Quit_62: -3370938498246517120
+      Quit_63: -2722163150761616883
+      Quit_64: 7848270004784124433
+      Quit_65: -757002181344179258
+      Quit_66: -694485698100343300
+      Quit_67: 2622762032343727660
+      Quit_68: 4297988778193754481
+      Quit_69: 5843267844933904620
+      Quit_7: -9099961264558706417
+      Quit_70: 273533111962048277
+      Quit_71: -3889799427629591513
+      Quit_72: 394290297417374621
+      Quit_73: -8228410864117201583
+      Quit_74: -165113954025259753
+      Quit_75: -7726778079823114387
+      Quit_76: 903132919446251057
+      Quit_77: -566202860838076682
+      Quit_78: -1092030207030841480
+      Quit_79: 236595281985106689
+      Quit_8: -6233667942767121944
+      Quit_80: -38694576761180482
+      Quit_81: -7022771081102035240
+      Quit_82: 6620472237324846965
+      Quit_83: -4725079503777002738
+      Quit_84: 1559353411284234587
+      Quit_85: 1823797638941136711
+      Quit_86: -283011423782068078
+      Quit_87: 3043991546040136661
+      Quit_88: -1657837188007677045
+      Quit_89: 6418077196405216954
+      Quit_9: 8988194820223025256
+      Quit_90: -133548867334684366
+      Quit_91: 9131445776481441782
+      Quit_92: 6456472378693667621
+      Quit_93: 1478373788473337581
+      Quit_94: -1222043072483017101
+      Quit_95: -5704227533435416689
+      Quit_96: 3284958862827363413
+      Quit_97: 9066523355037997559
+      Quit_98: 4798224466707666702
+      Quit_99: 3111869173408109290
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public List<GameObject> _playerList;
     public GameObject _map;
     public int _playerAlive;
+    public string _endSceneName;
 
     private bool _gameBegin;
 
@@ -36,10 +39,14 @@ public class PlayerManager : MonoBehaviour
             {
                 foreach (var player in _playerList)
                 {
-                    player.SetActive(true);
-                    player.GetComponent<PlayerAttack>().ResetStat();
+                    if (player.activeSelf == true)
+                    {
+                        PlayerPrefs.SetFloat("WinRed",player.GetComponent<PlayerAttack>()._colorPlayer.r);
+                        PlayerPrefs.SetFloat("WinBlue",player.GetComponent<PlayerAttack>()._colorPlayer.b);
+                        PlayerPrefs.SetFloat("WinGreen",player.GetComponent<PlayerAttack>()._colorPlayer.g);
+                        SceneManager.LoadScene(_endSceneName);
+                    }
                 }
-                _playerAlive = _playerList.Count;
             }
         }
     }
