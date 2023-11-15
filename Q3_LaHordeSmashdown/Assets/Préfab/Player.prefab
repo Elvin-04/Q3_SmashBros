@@ -666,7 +666,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1643021196541996647}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: BaseAttack
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -682,7 +682,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1643021196541996647}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: SideAttack
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -698,7 +698,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1643021196541996647}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: SideAttack
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -714,7 +714,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1643021196541996647}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: UpAttack
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -730,7 +730,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1643021196541996647}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
         m_MethodName: DownAttack
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -802,6 +802,9 @@ MonoBehaviour:
   _joystickTuched: 0
   _colorPlayer: {r: 0, g: 0, b: 0, a: 0}
   _life: 0
+  _isPause: 0
+  _name: 
+  _dead: 0
 --- !u!114 &4242532255573462921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +822,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   gravityWallForce: {x: 0, y: -18}
+  _ejection: 0
   colliders:
   - {fileID: 6296177008558822085}
   - {fileID: 7069620956943217065}

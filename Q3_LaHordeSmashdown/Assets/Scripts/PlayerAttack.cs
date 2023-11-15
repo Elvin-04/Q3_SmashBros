@@ -69,57 +69,69 @@ public class PlayerAttack : MonoBehaviour
         _rb.AddForce(_force, ForceMode2D.Impulse);
     }
 
-    public void BaseAttack()
+    public void BaseAttack(InputAction.CallbackContext ctx)
     {
-        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause)
+        if(ctx.performed)
         {
-            _animatorPlayer.Play("BaseAttack");
-            _attacking = true;
-            _pourcentInfliged = Random.Range(6, 8);
-            _propulsionForce = 1f;
-            _attackDirection = new Vector2(_rb.transform.forward.z, 2);
+            if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause)
+            {
+                _animatorPlayer.Play("BaseAttack");
+                _attacking = true;
+                _pourcentInfliged = Random.Range(6, 8);
+                _propulsionForce = 1f;
+                _attackDirection = new Vector2(_rb.transform.forward.z, 2);
+            }
         }
     }
 
-    public void SideAttack()
+    public void SideAttack(InputAction.CallbackContext ctx)
     {
-        if (_sideAttack && !_isPause)
+        if(ctx.performed)
         {
-            _sideAttack = false;
-            _animatorPlayer.Play("SideAttack");
-            _attacking = true;
-            _pourcentInfliged = Random.Range(20, 22);
-            _propulsionForce = 1.5f;
-            _attackDirection = new Vector2(_rb.transform.forward.z, 1);
-            StartCoroutine(WaitForSecontSideAttack(2f));
+            if (_sideAttack && !_isPause)
+            {
+                _sideAttack = false;
+                _animatorPlayer.Play("SideAttack");
+                _attacking = true;
+                _pourcentInfliged = Random.Range(20, 22);
+                _propulsionForce = 1.5f;
+                _attackDirection = new Vector2(_rb.transform.forward.z, 1);
+                StartCoroutine(WaitForSecontSideAttack(2f));
+            }
         }
     }
 
-    public void UpAttack()
+    public void UpAttack(InputAction.CallbackContext ctx)
     {
-        if (_upAttack && !_isPause)
+        if (ctx.performed)
         {
-            _upAttack = false;
-            _animatorPlayer.Play("UpAttack");
-            _attacking = true;
-            _pourcentInfliged = Random.Range(9, 11);
-            _propulsionForce = 1.0f;
-            _attackDirection = new Vector2(Random.Range(-0.5f,0.5f), 2);
-            StartCoroutine(WaitForSecontUpAttack(1f));
+            if (_upAttack && !_isPause)
+            {
+                _upAttack = false;
+                _animatorPlayer.Play("UpAttack");
+                _attacking = true;
+                _pourcentInfliged = Random.Range(9, 11);
+                _propulsionForce = 1.0f;
+                _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
+                StartCoroutine(WaitForSecontUpAttack(1f));
+            }
         }
     }
 
-    public void DownAttack()
+    public void DownAttack(InputAction.CallbackContext ctx)
     {
-        if (_downAttack && !_isPause)
+        if (ctx.performed)
         {
-            _downAttack = false;
-            _animatorPlayer.Play("DownAttack");
-            _attacking = true;
-            _pourcentInfliged = Random.Range(14, 16);
-            _propulsionForce = 1.5f;
-            _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
-            StartCoroutine(WaitForSecontDownAttack(1f));
+            if (_downAttack && !_isPause)
+            {
+                _downAttack = false;
+                _animatorPlayer.Play("DownAttack");
+                _attacking = true;
+                _pourcentInfliged = Random.Range(14, 16);
+                _propulsionForce = 1.5f;
+                _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
+                StartCoroutine(WaitForSecontDownAttack(1f));
+            }
         }
     }
 
