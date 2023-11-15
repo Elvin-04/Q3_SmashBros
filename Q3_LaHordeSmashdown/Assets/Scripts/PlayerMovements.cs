@@ -34,7 +34,6 @@ public class PlayerMovements : MonoBehaviour
     public Color dodgingColor;
     public Color normaColor;
 
-    Vector2 savedVelocity;
 
     private void Awake()
     {
@@ -93,7 +92,6 @@ public class PlayerMovements : MonoBehaviour
     {
         if(canDodge)
         {
-            savedVelocity = rb.velocity;
             canMove = false;
             canDodge = false;
             rb.velocity = Vector2.zero;
@@ -114,7 +112,6 @@ public class PlayerMovements : MonoBehaviour
         canMove = true;
         GetComponent<Collider2D>().enabled = true;
         GetComponent<SpriteRenderer>().color = normaColor;
-        rb.velocity = savedVelocity;
         StartCoroutine(DodgeReloadTime());
     }
 
@@ -209,6 +206,7 @@ public class PlayerMovements : MonoBehaviour
     {
         if(collision.transform.tag == "Ground")
         {
+            transform.parent = null;
             jumpCount = 2;
         }
 
