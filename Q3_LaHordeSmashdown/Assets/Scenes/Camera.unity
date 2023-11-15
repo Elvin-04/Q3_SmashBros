@@ -2072,6 +2072,9 @@ MonoBehaviour:
   players: []
   maxSize: 10
   minSize: 5
+  smoothTime: 0.5
+  minValues: {x: -11, y: -7.06, z: -10}
+  maxValues: {x: 11, y: 7.72, z: -10}
   twofurther:
   - {x: 0, y: 0}
   - {x: 0, y: 0}

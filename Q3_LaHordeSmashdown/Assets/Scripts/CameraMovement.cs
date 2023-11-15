@@ -15,8 +15,15 @@ public class CameraMovement : MonoBehaviour
     [Header("Cam")]
     public float maxSize = 8;
     public float minSize = 2.5f;
+    public float smoothTime = 0.5f;
     float actSize = 0.0f;
     bool started = false;
+
+    private Vector2 velocity = Vector2.zero;
+
+    [Header("CameraBounds")]
+    public Vector3 minValues;
+    public Vector3 maxValues;
 
 
     public List<Vector2> twofurther = new List<Vector2>(2) { new Vector2(0, 0), new Vector2(0, 0) };
@@ -30,7 +37,6 @@ public class CameraMovement : MonoBehaviour
     {
         posX = 0;
         posY = 0;
-        SetCameraPosition();
         players.Add(levelFocus);
     }
 
@@ -93,6 +99,14 @@ public class CameraMovement : MonoBehaviour
     private void SetCameraPosition()
     {
         pos.Set(posX, posY, -10);
-        transform.position = pos;
+
+        Vector3 boundPosition = new Vector3(
+            Mathf.Clamp(pos.x, minValues.x, maxValues.x),
+            Mathf.Clamp(pos.y, minValues.y, maxValues.y),
+            Mathf.Clamp(pos.z, minValues.z, maxValues.z));
+
+        transform.position = Vector2.SmoothDamp(transform.position, boundPosition, ref velocity, smoothTime);
+        transform.position += new Vector3(0, 0, -10);
     }
+
 }
