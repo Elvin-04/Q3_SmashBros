@@ -43,8 +43,6 @@ public class PlayerMovements : MonoBehaviour
 
     public bool onTheWall = false;
 
-    public bool onTheWall = false;
-
 
     private void Awake()
     {
