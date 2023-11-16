@@ -15,6 +15,10 @@ public class PlayerMovements : MonoBehaviour
 
     public bool _ejection;
 
+    public Animator _animatorLowHalf;
+
+    public SpriteRenderer spritePlayer;
+
     Rigidbody2D rb;
     [SerializeField] private List<Collider2D> colliders;
     private GameObject currentPlatform;
@@ -39,6 +43,8 @@ public class PlayerMovements : MonoBehaviour
 
     public bool onTheWall = false;
 
+    public bool onTheWall = false;
+
 
     private void Awake()
     {
@@ -57,7 +63,9 @@ public class PlayerMovements : MonoBehaviour
 
         _ejection = false;
 
-        GetComponent<SpriteRenderer>().color = normaColor;
+        _animatorLowHalf.SetBool("Grouded", true);
+
+        spritePlayer.color = normaColor;
     }
 
 
@@ -89,12 +97,16 @@ public class PlayerMovements : MonoBehaviour
         jumpCount = 2;
         rb.velocity = Vector2.zero;
         rb.AddForce(gravityWallForce);
+        GetComponent<Animator>().SetBool("OnWall", true);
+        _animatorLowHalf.SetBool("OnWall", true);
         onTheWall = true;
     }
 
     public void UnGrabWall()
     {
         rb.gravityScale = 1;
+        GetComponent<Animator>().SetBool("OnWall", false);
+        _animatorLowHalf.SetBool("OnWall", false);
         onTheWall = false;
     }
 
@@ -112,7 +124,7 @@ public class PlayerMovements : MonoBehaviour
 
             floorCollider.SetActive(true);
 
-            GetComponent<SpriteRenderer>().color = dodgingColor;
+            spritePlayer.color = dodgingColor;
             GetComponent<Collider2D>().enabled = false;
 
             StartCoroutine(DodgeTime());
@@ -127,7 +139,7 @@ public class PlayerMovements : MonoBehaviour
         floorCollider.SetActive(false);
         canMove = true;
         GetComponent<Collider2D>().enabled = true;
-        GetComponent<SpriteRenderer>().color = normaColor;
+        spritePlayer.color = normaColor;
         StartCoroutine(DodgeReloadTime());
     }
 
@@ -165,17 +177,20 @@ public class PlayerMovements : MonoBehaviour
         if (context.canceled)
         {
             GetComponent<PlayerAttack>()._joystickTuched = false;
+            _animatorLowHalf.SetBool("Moove", false);
         }
 
         if (canMove && !GetComponent<PlayerAttack>()._isPause)
         {
             if (leftJoystickValue.x < -0.5f)
             {
+                _animatorLowHalf.SetBool("Moove", true);
                 rb.velocity = new Vector2(-speed, rb.velocity.y);
                 transform.rotation = Quaternion.Euler(new(0, 180, 0));
             }
             else if (leftJoystickValue.x > 0.5f)
             {
+                _animatorLowHalf.SetBool("Moove", true);
                 rb.velocity = new Vector2(speed, rb.velocity.y);
                 transform.rotation = Quaternion.Euler(new(0, 0, 0));
             }
@@ -201,6 +216,8 @@ public class PlayerMovements : MonoBehaviour
         if (context.performed && canMove && !GetComponent<PlayerAttack>()._isPause) 
         {
             Jump();
+            _animatorLowHalf.Play("Jump");
+            _animatorLowHalf.SetBool("Grouded", false);
         }
 
         if(context.canceled)
@@ -228,6 +245,7 @@ public class PlayerMovements : MonoBehaviour
             {
                 rb.velocity = Vector2.zero;
             }
+            _animatorLowHalf.SetBool("Grouded", true);
         }
 
         if(_ejection)
@@ -240,6 +258,7 @@ public class PlayerMovements : MonoBehaviour
         {
             jumpCount = 2;
             currentPlatform = collision.gameObject;
+            _animatorLowHalf.SetBool("Grouded", true);
         }
     }
 

@@ -73,4 +73,10 @@ public class PlayerManager : MonoBehaviour
         camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
     }
+
+    public void RemovePlayer(GameObject player)
+    {
+        _playerList.Remove(player);
+        camMove.players.Remove(player.transform);
+    }
 }
