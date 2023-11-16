@@ -22,30 +22,32 @@ public class PausManager : MonoBehaviour
     public void PausResumaGame()
     {
         _paused = !_paused;
-        _pausAnimator.SetBool("UnPaus", _paused);
-        StartCoroutine(WaitSecond(1f));
-        _pausCanvas.gameObject.SetActive(_paused);
 
         foreach (var player in PlayerManager.instance._playerList)
         {
             player.GetComponent<PlayerAttack>()._isPause = _paused;
         }
 
-        if (_pausCanvas.gameObject.activeSelf == true)
+        if (_paused == true)
         {
             Time.timeScale = 0;
+            _pausCanvas.gameObject.SetActive(_paused);
+            _pausAnimator.SetBool("UnPaus", !_paused);
         }
-        else
+        else if (_paused == false)
         {
-            Time.timeScale = 1;
+            StartCoroutine(WaitToUnableCanvasPausMenu());
         }
     }
 
-    IEnumerator WaitSecond(float second)
+    IEnumerator WaitToUnableCanvasPausMenu()
     {
-        yield return new WaitForSeconds(second);
+        _pausAnimator.SetBool("UnPaus", !_paused);
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(1f);
+        _pausCanvas.gameObject.SetActive(_paused);
     }
-
+    
     public void MainMenu(string mainMenuSceneName)
     {
         Time.timeScale = 1;
