@@ -829,7 +829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: 0}
+  m_AnchoredPosition: {x: -1600, y: 0}
   m_SizeDelta: {x: 355.55, y: 161.852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583469465
@@ -2138,6 +2138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pausCanvas: {fileID: 1020691910}
   _pausAnimator: {fileID: 1020691912}
+  _paused: 0
 --- !u!114 &984975276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,7 +2448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 0}
+  m_AnchoredPosition: {x: 1600, y: 0}
   m_SizeDelta: {x: 334.5, y: 152.265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119711983

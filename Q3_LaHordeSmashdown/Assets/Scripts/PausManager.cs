@@ -9,14 +9,13 @@ public class PausManager : MonoBehaviour
     public Canvas _pausCanvas;
     public Animator _pausAnimator;
 
-    private bool _paused;
+    public bool _paused;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         _paused = false;
         _pausCanvas.gameObject.SetActive(false);
-        _pausAnimator.SetBool("UnPaus", false);
     }
 
     public void PausResumaGame()
@@ -32,7 +31,7 @@ public class PausManager : MonoBehaviour
         {
             Time.timeScale = 0;
             _pausCanvas.gameObject.SetActive(_paused);
-            _pausAnimator.SetBool("UnPaus", !_paused);
+            _pausAnimator.Play("PausMenu");
         }
         else if (_paused == false)
         {
@@ -42,7 +41,7 @@ public class PausManager : MonoBehaviour
 
     IEnumerator WaitToUnableCanvasPausMenu()
     {
-        _pausAnimator.SetBool("UnPaus", !_paused);
+        _pausAnimator.Play("UnPausMenu");
         Time.timeScale = 1;
         yield return new WaitForSeconds(1f);
         _pausCanvas.gameObject.SetActive(_paused);
