@@ -10,6 +10,8 @@ public class UIManagement : MonoBehaviour
 
     public List<PlayerAttack> _playerAttackList;
 
+    
+
     private void Start()
     {
         instance = this;
@@ -23,7 +25,17 @@ public class UIManagement : MonoBehaviour
             {
                 _percentTextList[i].color = Color.black;
                 _lifesTextList[i].color = _playerAttackList[i].GetComponent<PlayerMovements>().normaColor;
+                
+                string verif = _percentTextList[i].text;
                 _percentTextList[i].text = _playerAttackList[i]._pourcent + " %\n";
+                if(verif != _percentTextList[i].text)
+                {
+                    _percentTextList[i].GetComponent<Animator>().SetBool("TakeDamages", true);
+                }
+                else
+                {
+                    _percentTextList[i].GetComponent<Animator>().SetBool("TakeDamages", false);
+                }
                 switch(_playerAttackList[i]._life)
                 {
                     case 3:
