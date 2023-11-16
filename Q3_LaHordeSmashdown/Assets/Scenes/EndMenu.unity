@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067caef0d6abc47458f7538559728024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _WinnerName: {fileID: 1554167341}
+  _winnerName: {fileID: 1554167341}
   _newGameScene: MainScene
   _mainMenu: MainMenu
 --- !u!1 &1554167339

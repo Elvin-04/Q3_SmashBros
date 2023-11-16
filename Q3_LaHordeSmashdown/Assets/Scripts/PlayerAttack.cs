@@ -13,10 +13,10 @@ public class PlayerAttack : MonoBehaviour
     public bool _isPause;
     public string _name;
     public bool _dead;
+    public Animator _animatorPlayer;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
-    private Animator _animatorPlayer;
     private bool _attacking;
     private AnimatorClipInfo[] _anim;
     private float _pourcentInfliged;
@@ -40,7 +40,6 @@ public class PlayerAttack : MonoBehaviour
         _downAttack = true;
         _life = _lifeMax;
         _rb = GetComponent<Rigidbody2D>();
-        _animatorPlayer = GetComponent<Animator>();
         _pourcentInfliged = 0;
         _attacking = false;
         _isPause = false;
@@ -71,7 +70,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void BaseAttack()
     {
-        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause)
+        if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
         {
             _animatorPlayer.Play("BaseAttack");
             _attacking = true;
@@ -83,7 +82,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void SideAttack()
     {
-        if (_sideAttack && !_isPause)
+        if (_sideAttack && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
         {
             _sideAttack = false;
             _animatorPlayer.Play("SideAttack");
@@ -97,21 +96,21 @@ public class PlayerAttack : MonoBehaviour
 
     public void UpAttack()
     {
-        if (_upAttack && !_isPause)
+        if (_upAttack && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
         {
             _upAttack = false;
             _animatorPlayer.Play("UpAttack");
             _attacking = true;
             _pourcentInfliged = Random.Range(9, 11);
             _propulsionForce = 1.0f;
-            _attackDirection = new Vector2(Random.Range(-0.5f,0.5f), 2);
+            _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
             StartCoroutine(WaitForSecontUpAttack(1f));
         }
     }
 
     public void DownAttack()
     {
-        if (_downAttack && !_isPause)
+        if (_downAttack && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
         {
             _downAttack = false;
             _animatorPlayer.Play("DownAttack");
@@ -126,6 +125,7 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator WaitForSecontToMoove(float secondToWait)
     {
         yield return new WaitForSeconds(secondToWait);
+        GetComponent<PlayerMovements>().canMove = true;
     }
 
     private IEnumerator WaitForSecontSideAttack(float secondToWait)
@@ -152,7 +152,7 @@ public class PlayerAttack : MonoBehaviour
         PausManager.instance.PausResumaGame();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (_animatorPlayer.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
@@ -184,6 +184,7 @@ public class PlayerAttack : MonoBehaviour
             gameObject.transform.position = new Vector2(100000f, 0f);
             _dead = true;
             PlayerManager.instance._playerAlive--;
+            PlayerManager.instance.RemovePlayer(gameObject);
         }
     }
 }
