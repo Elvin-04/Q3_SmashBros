@@ -58,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
     {
         _pourcent = 0;
         _life = _lifeMax;
+        GetComponent<PlayerMovements>().canMove = true;
     }
 
     public void Propulse(float propulsionForce, Vector2 attackDirection)
@@ -164,7 +165,7 @@ public class PlayerAttack : MonoBehaviour
         PausManager.instance.PausResumaGame();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (_animatorPlayer.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
