@@ -224,6 +224,7 @@ public class PlayerMovements : MonoBehaviour
         {
             jumpCount = 2;
             currentPlatform = collision.gameObject;
+            rb.velocity = Vector2.zero;
         }
 
 
