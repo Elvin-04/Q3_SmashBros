@@ -26,6 +26,8 @@ public class PlayerAttack : MonoBehaviour
     private bool _upAttack;
     private bool _downAttack;
 
+    private PlayerInput _playerInput;
+    private Gamepad pad;
     //public enum Attack
     //{
     //    None,
@@ -46,6 +48,20 @@ public class PlayerAttack : MonoBehaviour
         _dead = false;
 
         PlayerManager.instance.AddPlayer(gameObject);
+
+        _playerInput = GetComponent<PlayerInput>();
+
+        if (_playerInput != null)
+        {
+            // Récupérer le gamepad associé au PlayerInput actuel
+            pad = _playerInput.devices[0] as Gamepad;
+
+            // Vérifier si le gamepad est valide
+            if (pad != null)
+            {
+                Debug.Log("Manette associée au PlayerInput : " + pad.device.deviceId);
+            }
+        }
     }
 
     public void AddPourcent(float pourcent)
@@ -63,9 +79,27 @@ public class PlayerAttack : MonoBehaviour
     {
         GetComponent<PlayerMovements>().canMove = false;
         GetComponent<PlayerMovements>()._ejection = true;
+
+        RumblePulse(0.6f, 0.6f, 0.1f);
+
         StartCoroutine(WaitForSecontToMoove(0.5f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
         _rb.AddForce(_force, ForceMode2D.Impulse);
+
+    }
+
+    public void RumblePulse(float lowFrequency, float highFrequency, float duration)
+    {
+        if (pad != null)
+        {
+            pad.SetMotorSpeeds(lowFrequency, highFrequency);
+            Invoke("SetMotorSpeedToZero", duration);
+        }
+    }
+
+    private void SetMotorSpeedToZero()
+    {
+        pad.SetMotorSpeeds(0f, 0f);
     }
 
     public void BaseAttack(InputAction.CallbackContext ctx)
@@ -100,6 +134,7 @@ public class PlayerAttack : MonoBehaviour
                     _pourcentInfliged = Random.Range(20, 22);
                     _propulsionForce = 1.5f;
                     _attackDirection = new Vector2(_rb.transform.forward.z, 1);
+                    StartCoroutine(WaitForSecontSideAttack(0.6f));
                     StartCoroutine(WaitForSecontSideAttack(0.6f));
                 }
             }
