@@ -35,6 +35,7 @@ public class PlayerMovements : MonoBehaviour
     public float reloadDodgeTime = 1.2f;
     public Color dodgingColor;
     public Color normaColor;
+    public GameObject floorCollider;
 
     public bool onTheWall = false;
 
@@ -104,7 +105,12 @@ public class PlayerMovements : MonoBehaviour
             canMove = false;
             canDodge = false;
             rb.velocity = Vector2.zero;
-            rb.gravityScale = 0;
+
+
+            if (currentPlatform == null)
+                rb.gravityScale = 0;
+
+            floorCollider.SetActive(true);
 
             GetComponent<SpriteRenderer>().color = dodgingColor;
             GetComponent<Collider2D>().enabled = false;
@@ -118,6 +124,7 @@ public class PlayerMovements : MonoBehaviour
     {
         yield return new WaitForSeconds(dodgeTime);
         rb.gravityScale = 1;
+        floorCollider.SetActive(false);
         canMove = true;
         GetComponent<Collider2D>().enabled = true;
         GetComponent<SpriteRenderer>().color = normaColor;
