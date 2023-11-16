@@ -13,10 +13,10 @@ public class PlayerAttack : MonoBehaviour
     public bool _isPause;
     public string _name;
     public bool _dead;
+    public Animator _animatorPlayer;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
-    private Animator _animatorPlayer;
     private bool _attacking;
     private AnimatorClipInfo[] _anim;
     private float _pourcentInfliged;
@@ -40,7 +40,6 @@ public class PlayerAttack : MonoBehaviour
         _downAttack = true;
         _life = _lifeMax;
         _rb = GetComponent<Rigidbody2D>();
-        _animatorPlayer = GetComponent<Animator>();
         _pourcentInfliged = 0;
         _attacking = false;
         _isPause = false;
@@ -73,13 +72,16 @@ public class PlayerAttack : MonoBehaviour
     {
         if(ctx.performed)
         {
-            if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+            if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
             {
-                _animatorPlayer.Play("BaseAttack");
-                _attacking = true;
-                _pourcentInfliged = Random.Range(6, 8);
-                _propulsionForce = 1f;
-                _attackDirection = new Vector2(_rb.transform.forward.z, 2);
+                if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+                {
+                    _animatorPlayer.Play("BaseAttack");
+                    _attacking = true;
+                    _pourcentInfliged = Random.Range(6, 8);
+                    _propulsionForce = 1f;
+                    _attackDirection = new Vector2(_rb.transform.forward.z, 2);
+                }
             }
         }
     }
@@ -88,15 +90,18 @@ public class PlayerAttack : MonoBehaviour
     {
         if(ctx.performed)
         {
-            if (_sideAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+            if (_sideAttack && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
             {
-                _sideAttack = false;
-                _animatorPlayer.Play("SideAttack");
-                _attacking = true;
-                _pourcentInfliged = Random.Range(20, 22);
-                _propulsionForce = 1.5f;
-                _attackDirection = new Vector2(_rb.transform.forward.z, 1);
-                StartCoroutine(WaitForSecontSideAttack(2f));
+                if (_sideAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+                {
+                    _sideAttack = false;
+                    _animatorPlayer.Play("SideAttack");
+                    _attacking = true;
+                    _pourcentInfliged = Random.Range(20, 22);
+                    _propulsionForce = 1.5f;
+                    _attackDirection = new Vector2(_rb.transform.forward.z, 1);
+                    StartCoroutine(WaitForSecontSideAttack(2f));
+                }
             }
         }
     }
@@ -122,15 +127,18 @@ public class PlayerAttack : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_downAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+            if (_downAttack && !_isPause && !GetComponent<PlayerMovements>().onTheWall)
             {
-                _downAttack = false;
-                _animatorPlayer.Play("DownAttack");
-                _attacking = true;
-                _pourcentInfliged = Random.Range(14, 16);
-                _propulsionForce = 1.5f;
-                _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
-                StartCoroutine(WaitForSecontDownAttack(1f));
+                if (_downAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
+                {
+                    _downAttack = false;
+                    _animatorPlayer.Play("DownAttack");
+                    _attacking = true;
+                    _pourcentInfliged = Random.Range(14, 16);
+                    _propulsionForce = 1.5f;
+                    _attackDirection = new Vector2(Random.Range(-0.5f, 0.5f), 2);
+                    StartCoroutine(WaitForSecontDownAttack(1f));
+                }
             }
         }
     }
@@ -195,9 +203,10 @@ public class PlayerAttack : MonoBehaviour
 
         if (_life == 0)
         {
-            gameObject.transform.position = new Vector2(500f, 0f);
+            gameObject.transform.position = new Vector2(100000f, 0f);
             _dead = true;
             PlayerManager.instance._playerAlive--;
+            PlayerManager.instance.RemovePlayer(gameObject);
         }
     }
 }
