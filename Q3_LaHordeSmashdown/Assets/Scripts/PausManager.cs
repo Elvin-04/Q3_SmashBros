@@ -7,6 +7,7 @@ public class PausManager : MonoBehaviour
 {
     public static PausManager instance;
     public Canvas _pausCanvas;
+    public Animator _pausAnimator;
 
     private bool _paused;
 
@@ -15,11 +16,14 @@ public class PausManager : MonoBehaviour
         instance = this;
         _paused = false;
         _pausCanvas.gameObject.SetActive(false);
+        _pausAnimator.SetBool("UnPaus", false);
     }
 
     public void PausResumaGame()
     {
         _paused = !_paused;
+        _pausAnimator.SetBool("UnPaus", _paused);
+        StartCoroutine(WaitSecond(1f));
         _pausCanvas.gameObject.SetActive(_paused);
 
         foreach (var player in PlayerManager.instance._playerList)
@@ -35,6 +39,11 @@ public class PausManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+
+    IEnumerator WaitSecond(float second)
+    {
+        yield return new WaitForSeconds(second);
     }
 
     public void MainMenu(string mainMenuSceneName)
