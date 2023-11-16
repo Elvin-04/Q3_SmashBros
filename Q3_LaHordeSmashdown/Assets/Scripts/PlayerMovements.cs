@@ -36,6 +36,8 @@ public class PlayerMovements : MonoBehaviour
     public Color dodgingColor;
     public Color normaColor;
 
+    public bool onTheWall = false;
+
 
     private void Awake()
     {
@@ -83,13 +85,16 @@ public class PlayerMovements : MonoBehaviour
     public void GrabWall()
     {
         rb.gravityScale = 0;
+        jumpCount = 2;
         rb.velocity = Vector2.zero;
         rb.AddForce(gravityWallForce);
+        onTheWall = true;
     }
 
     public void UnGrabWall()
     {
         rb.gravityScale = 1;
+        onTheWall = false;
     }
 
     private void Dodge()
@@ -225,8 +230,6 @@ public class PlayerMovements : MonoBehaviour
             jumpCount = 2;
             currentPlatform = collision.gameObject;
         }
-
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
