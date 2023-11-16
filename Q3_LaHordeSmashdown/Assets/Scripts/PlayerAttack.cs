@@ -100,7 +100,7 @@ public class PlayerAttack : MonoBehaviour
                     _pourcentInfliged = Random.Range(20, 22);
                     _propulsionForce = 1.5f;
                     _attackDirection = new Vector2(_rb.transform.forward.z, 1);
-                    StartCoroutine(WaitForSecontSideAttack(2f));
+                    StartCoroutine(WaitForSecontSideAttack(0.6f));
                 }
             }
         }
