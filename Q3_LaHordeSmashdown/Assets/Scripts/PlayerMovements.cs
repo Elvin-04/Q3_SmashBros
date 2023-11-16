@@ -224,6 +224,10 @@ public class PlayerMovements : MonoBehaviour
         {
             transform.parent = null;
             jumpCount = 2;
+            if (GetComponent<PlayerAttack>()._joystickTuched == false)
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
 
         if(_ejection)
@@ -236,7 +240,6 @@ public class PlayerMovements : MonoBehaviour
         {
             jumpCount = 2;
             currentPlatform = collision.gameObject;
-            rb.velocity = Vector2.zero;
         }
     }
 
