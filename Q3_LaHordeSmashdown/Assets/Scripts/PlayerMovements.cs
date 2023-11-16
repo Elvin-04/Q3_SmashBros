@@ -94,7 +94,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void Dodge()
     {
-        if(canDodge)
+        if(canDodge && !GetComponent<PlayerAttack>()._isPause)
         {
             canMove = false;
             canDodge = false;
@@ -186,7 +186,7 @@ public class PlayerMovements : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && canMove && !GetComponent<PlayerAttack>()._isPause) 
         {
             Jump();
         }
