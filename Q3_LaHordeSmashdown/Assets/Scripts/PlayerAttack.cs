@@ -73,7 +73,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(ctx.performed)
         {
-            if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && GetComponent<PlayerMovements>().canMove)
+            if (!_joystickTuched && _rb.velocity.x <= 0.5f && Input.GetAxis("Vertical") == 0f && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
             {
                 _animatorPlayer.Play("BaseAttack");
                 _attacking = true;
@@ -88,7 +88,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(ctx.performed)
         {
-            if (_sideAttack && !_isPause && GetComponent<PlayerMovements>().canMove)
+            if (_sideAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
             {
                 _sideAttack = false;
                 _animatorPlayer.Play("SideAttack");
@@ -105,7 +105,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_upAttack && !_isPause && GetComponent<PlayerMovements>().canMove)
+            if (_upAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
             {
                 _upAttack = false;
                 _animatorPlayer.Play("UpAttack");
@@ -122,7 +122,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_downAttack && !_isPause && GetComponent<PlayerMovements>().canMove)
+            if (_downAttack && !_isPause && GetComponent<PlayerMovements>().canMove && !GetComponent<PlayerMovements>().onTheWall)
             {
                 _downAttack = false;
                 _animatorPlayer.Play("DownAttack");
