@@ -21,7 +21,7 @@ public class UIManagement : MonoBehaviour
         {
             if (i < _playerAttackList.Count)
             {
-                _percentTextList[i].color = _playerAttackList[i].GetComponent<PlayerMovements>().normaColor;
+                _percentTextList[i].color = Color.black;
                 _lifesTextList[i].color = _playerAttackList[i].GetComponent<PlayerMovements>().normaColor;
                 _percentTextList[i].text = _playerAttackList[i]._pourcent + " %\n";
                 switch(_playerAttackList[i]._life)
