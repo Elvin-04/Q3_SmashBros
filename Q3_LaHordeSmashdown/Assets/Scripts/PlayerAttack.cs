@@ -58,7 +58,6 @@ public class PlayerAttack : MonoBehaviour
     {
         _pourcent = 0;
         _life = _lifeMax;
-        GetComponent<PlayerMovements>().canMove = true;
     }
 
     public void Propulse(float propulsionForce, Vector2 attackDirection)
@@ -188,6 +187,7 @@ public class PlayerAttack : MonoBehaviour
         {
             _life -= 1;
             _pourcent = 0;
+            GetComponent<PlayerMovements>().canMove = true;
             _rb.velocity = Vector3.zero;
             transform.position = PlayerManager.instance.transform.position;
         }
