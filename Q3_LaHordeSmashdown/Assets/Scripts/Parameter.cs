@@ -13,6 +13,7 @@ public class Parameter : MonoBehaviour
 
     private void Start()
     {
+        Reset();
         SetValuesInit();
     }
 
