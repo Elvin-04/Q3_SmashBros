@@ -2024,6 +2024,7 @@ MonoBehaviour:
   _map: {fileID: 1588170318}
   _playerAlive: 0
   _endSceneName: EndMenu
+  _countPlayerPseudo: 0
   camMove: {fileID: 1571564892}
   playerColors:
   - {r: 0.6179246, g: 0.6179246, b: 1, a: 1}
@@ -2045,7 +2046,7 @@ MonoBehaviour:
   m_NotificationBehavior: 2
   m_MaxPlayerCount: 4
   m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2067,13 +2068,29 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: e7f8807d-20e9-4eea-ba5b-112c6d5f1e55
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 055794a2-a5aa-4e40-ae5c-3cfb08054bb7
+        m_Path: <Gamepad>/leftShoulder
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 954c0e68-7ded-4fd8-92cf-ffc08020f7b6
+        m_Path: <Keyboard>/ctrl
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 6589450806660917044, guid: a4a35ace6770dcd43ba33aea285d6f12, type: 3}
