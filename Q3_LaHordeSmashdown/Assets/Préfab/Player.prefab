@@ -1720,6 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476442fd94f89274081497f0e1096b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 85cb899e58f8d6d4eb89b63b1a20e087, type: 2}
   speed: 9
   groundLayer:
     serializedVersion: 2
@@ -1737,7 +1738,7 @@ MonoBehaviour:
   - {fileID: 5981723581780551545}
   - {fileID: 5258058829389499665}
   jumpForce: 14
-  jumpCount: 2
+  maxJump: 2
   maxTimeJump: 0.15
   dodgeTime: 0.3
   canMove: 1

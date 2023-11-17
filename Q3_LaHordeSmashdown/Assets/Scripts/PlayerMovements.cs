@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovements : MonoBehaviour
 {
 
+    public GameData gameData;
+
     public float speed = 5f;
     
     public LayerMask groundLayer;
@@ -27,7 +29,8 @@ public class PlayerMovements : MonoBehaviour
 
     [Header("Jump")]
     public float jumpForce = 15f;
-    public int jumpCount = 2;
+    public int maxJump = 2;
+    private int jumpCount = 2;
     private bool isJumping = false;
     public float maxTimeJump = 0.8f;
     private float jumpTimer = 0.0f;
@@ -57,10 +60,16 @@ public class PlayerMovements : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        jumpCount = 2;
+        jumpCount = maxJump;
         canDodge = true;
 
         source = GetComponent<AudioSource>();
+
+        speed = gameData.playerSpeed;
+        maxJump = gameData.jump;
+        jumpForce = gameData.jumpForce;
+        dodgeTime = gameData.dodgeTime;
+        dashForce = gameData.dodgeForce;
         
     }
 
@@ -108,7 +117,7 @@ public class PlayerMovements : MonoBehaviour
     public void GrabWall()
     {
         rb.gravityScale = 0;
-        jumpCount = 2;
+        jumpCount = maxJump;
         rb.velocity = Vector2.zero;
         rb.AddForce(gravityWallForce);
         GetComponent<Animator>().SetBool("OnWall", true);
@@ -264,7 +273,7 @@ public class PlayerMovements : MonoBehaviour
         if(collision.transform.tag == "Ground")
         {
             transform.parent = null;
-            jumpCount = 2;
+            jumpCount = maxJump;
             if (GetComponent<PlayerAttack>()._joystickTuched == false)
             {
                 rb.velocity = Vector2.zero;
@@ -280,7 +289,7 @@ public class PlayerMovements : MonoBehaviour
 
         if(collision.transform.tag == "Platform")
         {
-            jumpCount = 2;
+            jumpCount = maxJump;
             currentPlatform = collision.gameObject;
             _animatorLowHalf.SetBool("Grouded", true);
         }
