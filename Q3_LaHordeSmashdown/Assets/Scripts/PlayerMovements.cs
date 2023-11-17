@@ -35,16 +35,22 @@ public class PlayerMovements : MonoBehaviour
     [Header("Dodge")]
     public float dodgeTime = 0.2f;
     private bool canDodge = true;
+    private bool isDodge = false;
     public bool canMove = true;
     public float reloadDodgeTime = 1.2f;
     public Color dodgingColor;
     public Color normaColor;
     public GameObject floorCollider;
+    public float dashForce = 2.5f;
+    private Vector2 joystickValue;
+    float actTime = 0.0f;
 
     public bool onTheWall = false;
 
     private AudioSource source;
     public AudioClip dashSound;
+
+    public ParticleSystem particles;
 
 
     private void Awake()
@@ -77,6 +83,12 @@ public class PlayerMovements : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce + new Vector2(rb.velocity.x, 0);
             jumpTimer += Time.deltaTime;
+        }
+
+        if(isDodge && actTime <= dodgeTime)
+        {
+            actTime += Time.deltaTime;
+            rb.velocity = joystickValue * dashForce;
         }
     }
 
@@ -118,7 +130,14 @@ public class PlayerMovements : MonoBehaviour
         {
             canMove = false;
             canDodge = false;
+            isDodge = true;
+
             rb.velocity = Vector2.zero;
+            
+            particles.Play();
+
+            joystickValue = leftJoystickValue;
+            actTime = 0;
 
             source.clip = dashSound;
             source.Play();
@@ -142,6 +161,8 @@ public class PlayerMovements : MonoBehaviour
         rb.gravityScale = 1;
         floorCollider.SetActive(false);
         canMove = true;
+        particles.Stop();
+        isDodge = false;
         GetComponent<Collider2D>().enabled = true;
         spritePlayer.color = normaColor;
         StartCoroutine(DodgeReloadTime());
@@ -167,8 +188,7 @@ public class PlayerMovements : MonoBehaviour
             Physics2D.IgnoreCollision(col, platformCollider, false);
         }
     }
-
-    
+   
     public void OnMove(InputAction.CallbackContext context)
     {
         leftJoystickValue = context.ReadValue<Vector2>();
