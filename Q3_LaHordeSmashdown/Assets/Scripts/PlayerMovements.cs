@@ -242,6 +242,10 @@ public class PlayerMovements : MonoBehaviour
                 rb.velocity += new Vector2(0, -1.5f);
             }
         }
+        else if (GetComponent<PlayerAttack>()._isPause)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
