@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c645230177a3c54094eb559efbd746d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
   _pourcent: 0
   _lifeMax: 3
   _joystickTuched: 0
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 476442fd94f89274081497f0e1096b1e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   speed: 9
   groundLayer:
     serializedVersion: 2

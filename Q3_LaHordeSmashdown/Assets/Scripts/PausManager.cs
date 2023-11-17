@@ -7,39 +7,54 @@ public class PausManager : MonoBehaviour
 {
     public static PausManager instance;
     public Canvas _pausCanvas;
+    public Animator _pausAnimator;
 
-    private bool _paused;
+    public bool _paused;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         _paused = false;
         _pausCanvas.gameObject.SetActive(false);
+        _pausAnimator.SetBool("UnPaus", false);
     }
 
     public void PausResumaGame()
     {
         _paused = !_paused;
-        _pausCanvas.gameObject.SetActive(_paused);
 
         foreach (var player in PlayerManager.instance._playerList)
         {
             player.GetComponent<PlayerAttack>()._isPause = _paused;
         }
 
-        if (_pausCanvas.gameObject.activeSelf == true)
+        if (_paused == true)
         {
             Time.timeScale = 0;
+            _pausCanvas.gameObject.SetActive(_paused);
+            _pausAnimator.SetBool("UnPaus", false);
         }
-        else
+        else if (_paused == false)
         {
-            Time.timeScale = 1;
+            _pausAnimator.SetBool("UnPaus", true);
+            StartCoroutine(WaitToUnableCanvasPausMenu());
         }
     }
 
-    public void MainMenu(string mainMenuSceneName)
+    IEnumerator WaitToUnableCanvasPausMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(mainMenuSceneName);
+        yield return new WaitForSeconds(1f);
+        _pausCanvas.gameObject.SetActive(_paused);
+        _pausAnimator.SetBool("UnPaus", false);
+    }
+    
+    public void MainMenu(string mainMenuSceneName)
+    {
+        if (_paused)
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(mainMenuSceneName);
+        }
     }
 }
