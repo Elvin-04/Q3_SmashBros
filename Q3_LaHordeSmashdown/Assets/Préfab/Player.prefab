@@ -806,7 +806,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2058,6 +2058,7 @@ Transform:
   - {fileID: 7968389178284306936}
   - {fileID: 5674180589127956637}
   - {fileID: 4830343279129771398}
+  - {fileID: 8204569717159487204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7677064143355554284
