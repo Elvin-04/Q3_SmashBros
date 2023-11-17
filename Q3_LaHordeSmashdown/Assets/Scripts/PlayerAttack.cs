@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -16,6 +18,10 @@ public class PlayerAttack : MonoBehaviour
     public string _name;
     public bool _dead;
     public Animator _animatorPlayer;
+    public TextMeshProUGUI _nameText;
+    public bool _pseudoEntree;
+    public TMP_InputField _pseudochangeField;
+    public TextMeshProUGUI _pseudoText;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -27,7 +33,6 @@ public class PlayerAttack : MonoBehaviour
     private bool _sideAttack;
     private bool _upAttack;
     private bool _downAttack;
-
     private PlayerInput _playerInput;
     private Gamepad pad;
     //public enum Attack
@@ -58,15 +63,48 @@ public class PlayerAttack : MonoBehaviour
         _isPause = false;
         _dead = false;
         _audioSource = GetComponent<AudioSource>();
+        _pseudoEntree = false;
 
         PlayerManager.instance.AddPlayer(gameObject);
 
         _playerInput = GetComponent<PlayerInput>();
 
+
         if (_playerInput != null)
         {
             pad = _playerInput.devices[0] as Gamepad;
         }
+
+
+    }
+
+    void Update()
+    {
+        if (_pseudoEntree) 
+        {
+            Vector3 positionTexte = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            gameObject.GetComponentInChildren<TextMeshProUGUI>().transform.position = positionTexte + new Vector3(0, 70, 0); // Ajustez cette valeur pour le positionnement vertical
+        }
+        else
+        {
+            _pseudochangeField.image.color = _pseudoText.color = GetComponent<PlayerMovements>().normaColor;
+            _pseudoText.gameObject.SetActive(false);
+            Time.timeScale = 0;
+            _isPause = true;
+        }
+    }
+
+    public void ChangingPseudo()
+    {
+        _pseudoText.gameObject.SetActive(true);
+        string pseudo = _pseudochangeField.text;
+        _pseudochangeField.gameObject.SetActive(false);
+        _pseudoText.text = pseudo;
+        _name = pseudo;
+        _pseudoText.color = GetComponent<PlayerMovements>().normaColor;
+        _pseudoEntree = true;
+        _isPause = false;
+        PlayerManager.instance.CheckAllPseudo();
     }
 
     public void AddPourcent(float pourcent)

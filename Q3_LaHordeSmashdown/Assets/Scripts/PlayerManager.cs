@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject _map;
     public int _playerAlive;
     public string _endSceneName;
+    public int _countPlayerPseudo;
 
     private bool _gameBegin;
 
@@ -68,10 +69,30 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(GameObject player)
     {
         player.GetComponent<PlayerMovements>().normaColor = playerColors[_playerList.Count];
-        player.GetComponent<PlayerAttack>()._name = "Player " + (_playerList.Count + 1);
         _playerList.Add(player);
         camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
+    }
+
+    public void CheckAllPseudo()
+    {
+        foreach (var player in _playerList)
+        {
+            if (player.GetComponent<PlayerAttack>()._pseudoEntree == true)
+            {
+                _countPlayerPseudo++;
+            }
+        }
+
+        if (_countPlayerPseudo == _playerList.Count)
+        {
+            _countPlayerPseudo = 0;
+            Time.timeScale = 1;
+        }
+        else
+        {
+            _countPlayerPseudo = 0;
+        }
     }
 
     public void RemovePlayer(GameObject player)
