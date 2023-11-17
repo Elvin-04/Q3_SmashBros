@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,6 +37,15 @@ public class PlayerAttack : MonoBehaviour
     //    AttackSideLeft
     //};
 
+    [Header("Info Shake")]
+    public GameObject _objectToShake;
+    public AnimationCurve shakeCurve;
+    public float duration = 0.15f;
+
+    [Header("Sounds")]
+    public List<AudioClip> punchSounds;
+    private AudioSource _audioSource;
+
     private void Start()
     {
         _sideAttack = true;
@@ -46,6 +57,7 @@ public class PlayerAttack : MonoBehaviour
         _attacking = false;
         _isPause = false;
         _dead = false;
+        _audioSource = GetComponent<AudioSource>();
 
         PlayerManager.instance.AddPlayer(gameObject);
 
@@ -53,14 +65,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (_playerInput != null)
         {
-            // Récupérer le gamepad associé au PlayerInput actuel
             pad = _playerInput.devices[0] as Gamepad;
-
-            // Vérifier si le gamepad est valide
-            if (pad != null)
-            {
-                Debug.Log("Manette associée au PlayerInput : " + pad.device.deviceId);
-            }
         }
     }
 
@@ -80,7 +85,11 @@ public class PlayerAttack : MonoBehaviour
         GetComponent<PlayerMovements>().canMove = false;
         GetComponent<PlayerMovements>()._ejection = true;
 
-        RumblePulse(0.6f, 0.6f, 0.1f);
+        RumblePulse(0.8f, 0.8f, 0.1f);
+        StartCoroutine(Shaking());
+        int choosedSound = Random.Range(0, punchSounds.Count);
+        _audioSource.clip = punchSounds[choosedSound];
+        _audioSource.Play();
 
         StartCoroutine(WaitForSecontToMoove(0.5f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
@@ -100,6 +109,22 @@ public class PlayerAttack : MonoBehaviour
     private void SetMotorSpeedToZero()
     {
         pad.SetMotorSpeeds(0f, 0f);
+    }
+
+    IEnumerator Shaking()
+    {
+        Vector2 startPosition = _objectToShake.transform.localPosition;
+        float elapsedTime = 0f;
+
+        while(elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float strenght = shakeCurve.Evaluate(elapsedTime / duration);
+            _objectToShake.transform.localPosition = startPosition + Random.insideUnitCircle * strenght;
+            yield return null;
+        }
+
+        _objectToShake.transform.localPosition = startPosition;
     }
 
     public void BaseAttack(InputAction.CallbackContext ctx)
@@ -229,6 +254,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.transform.tag == "LimitMap")
         {
+            AudioManager.instance.PlayerDeath();
             _life -= 1;
             _pourcent = 0;
             GetComponent<PlayerMovements>().canMove = true;

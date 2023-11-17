@@ -43,6 +43,9 @@ public class PlayerMovements : MonoBehaviour
 
     public bool onTheWall = false;
 
+    private AudioSource source;
+    public AudioClip dashSound;
+
 
     private void Awake()
     {
@@ -51,6 +54,7 @@ public class PlayerMovements : MonoBehaviour
         jumpCount = 2;
         canDodge = true;
 
+        source = GetComponent<AudioSource>();
         
     }
 
@@ -116,6 +120,8 @@ public class PlayerMovements : MonoBehaviour
             canDodge = false;
             rb.velocity = Vector2.zero;
 
+            source.clip = dashSound;
+            source.Play();
 
             if (currentPlatform == null)
                 rb.gravityScale = 0;
