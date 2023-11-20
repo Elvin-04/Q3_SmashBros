@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
     public bool _pseudoEntree;
     public TMP_InputField _pseudochangeField;
     public TextMeshProUGUI _pseudoText;
+    public GameObject _map;
 
     private float _propulsionForce;
     private Rigidbody2D _rb;
@@ -35,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
     private bool _downAttack;
     private PlayerInput _playerInput;
     private Gamepad pad;
+    private GameObject _ejectEffect;
     //public enum Attack
     //{
     //    None,
@@ -132,7 +135,6 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(WaitForSecontToMoove(0.5f));
         _force = attackDirection * propulsionForce * (_pourcent / 8);
         _rb.AddForce(_force, ForceMode2D.Impulse);
-
     }
 
     public void RumblePulse(float lowFrequency, float highFrequency, float duration)
@@ -266,9 +268,20 @@ public class PlayerAttack : MonoBehaviour
         _downAttack = true;
     }
 
+    //private IEnumerator WaitToDestroyGameObject(GameObject objectToDestroy, float time) 
+    //{
+    //    yield return new WaitForSeconds(time);
+    //    Destroy(objectToDestroy);
+    //}
+
     public void Pause()
     {
         PausManager.instance.PausResumaGame();
+    }
+
+    public void SetEjectEffect(GameObject fire)
+    {
+        _ejectEffect = fire;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -292,11 +305,24 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.transform.tag == "LimitMap")
         {
+            GameObject effect;
             AudioManager.instance.PlayerDeath();
             _life -= 1;
             _pourcent = 0;
             GetComponent<PlayerMovements>().canMove = true;
             _rb.velocity = Vector3.zero;
+
+            Vector3 direction = transform.position - _map.transform.position;
+
+            if (transform.position.y >= 0)
+            {
+                effect = Instantiate(_ejectEffect, transform.position, Quaternion.Euler(0, 0, -Mathf.Atan(direction.normalized.x / direction.normalized.y) * Mathf.Rad2Deg + 180));
+            }
+            else
+            {
+                effect = Instantiate(_ejectEffect, transform.position, Quaternion.Euler(0, 0, -Mathf.Atan(direction.normalized.x / direction.normalized.y) * Mathf.Rad2Deg));
+            }
+
             transform.position = PlayerManager.instance.transform.position;
         }
 

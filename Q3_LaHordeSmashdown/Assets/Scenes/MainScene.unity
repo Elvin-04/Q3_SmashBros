@@ -2031,6 +2031,10 @@ MonoBehaviour:
   - {r: 1, g: 0.3537736, b: 0.3537736, a: 1}
   - {r: 0.29716986, g: 0.5, b: 0.2523585, a: 1}
   - {r: 0.9716981, g: 0.9716981, b: 0.6004361, a: 1}
+  _redFire: {fileID: 1975959190090480, guid: eca000ab44c908d4dab395f654753038, type: 3}
+  _blueFire: {fileID: 1223526616464650, guid: c590b17884b119046bc6412066500b7d, type: 3}
+  _yellowFire: {fileID: 1725317912486240, guid: e55149ba6f4d00741984987e258c3378, type: 3}
+  _greenFire: {fileID: 1518366863219760, guid: 3d35e81bdc5955041be098ef22e82a3b, type: 3}
 --- !u!114 &984975273
 MonoBehaviour:
   m_ObjectHideFlags: 0

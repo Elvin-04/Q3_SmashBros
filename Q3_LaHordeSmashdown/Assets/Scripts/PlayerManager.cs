@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
 
     public CameraMovement camMove;
     public List<Color> playerColors;
+    public GameObject _redFire;
+    public GameObject _blueFire;
+    public GameObject _yellowFire;
+    public GameObject _greenFire;
 
     void Start()
     {
@@ -69,7 +73,24 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(GameObject player)
     {
         player.GetComponent<PlayerMovements>().normaColor = playerColors[_playerList.Count];
+        player.GetComponent<PlayerAttack>()._map = _map;
         _playerList.Add(player);
+        if (_playerList.Count == 1)
+        {
+            player.GetComponent<PlayerAttack>().SetEjectEffect(_blueFire);
+        }
+        else if (_playerList.Count == 2)
+        {
+            player.GetComponent<PlayerAttack>().SetEjectEffect(_redFire);
+        }
+        else if (_playerList.Count == 3)
+        {
+            player.GetComponent<PlayerAttack>().SetEjectEffect(_greenFire);
+        }
+        else
+        {
+            player.GetComponent<PlayerAttack>().SetEjectEffect(_yellowFire);
+        }
         camMove.players.Add(player.transform);
         UIManagement.instance.AddPlayerUI(player.GetComponent<PlayerAttack>());
     }
